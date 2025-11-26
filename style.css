@@ -1,0 +1,495 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Sansation', Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Para que todo el contenido se vea centrado */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Títulos generales */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+/* Línea roja debajo de los títulos */
+.section-underline {
+    width: 140px;
+    height: 5px;
+    background-color: #e10600;
+    border-radius: 10px;
+    margin: 6px 0 24px;
+}
+
+/* ==========================
+   NAVBAR
+===========================*/
+.navbar {
+    background-color: #e10600;
+    color: #ffffff;
+    padding: 24px 40px 28px;
+    display: flex;
+    flex-direction: column;              /* Logo arriba, menú abajo */
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+/* Logo centrado y grande */
+.navbar .logo img {
+    height: 120px;
+    max-width: 100%;
+    display: block;
+}
+
+/* Menú principal */
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 60px;                           /* Separación entre opciones */
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+
+/*Para el dropdown */
+.menu li {
+    position: relative;                  
+}
+
+.menu a {
+    color: #ffffff;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+/* Para subrayar de blanco en el navbar y en el enlace activo */
+.menu a:hover::after,
+.menu a.activo::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 999px;
+}
+
+/* ==========================
+   DROPDOWN ACTIVIDADES
+===========================*/
+.dropdown .arrow {
+    font-size: 0.7em;
+    margin-left: 4px;
+}
+
+/* Contenedor del menú desplegable */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    min-width: 230px;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.22);
+    padding: 8px 0;
+    display: none;
+    z-index: 50;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+/* Links internos del dropdown */
+.dropdown-menu a {
+    display: block;
+    padding: 10px 18px;
+    font-size: 0.9rem;
+    color: #000000;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f5f5f5;
+}
+
+/* Mostrar el menú al pasar el mouse por Actividades */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* ==========================
+   SECCIÓN NOTICIAS
+===========================*/
+.noticias {
+    margin-top: 40px;
+}
+
+/* Card principal */
+.principal {
+    margin-top: 20px;
+    margin-bottom: 26px;
+}
+
+.principal img {
+    width: 100%;
+    display: block;
+    border-radius: 16px;
+    margin-bottom: 16px;
+}
+
+.principal h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.principal .descripcion {
+    font-size: 0.9rem;
+    color: #333333;
+    max-width: 620px;
+}
+
+/* Noticias secundarias */
+.secundarias {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.secundarias article {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.secundarias article:hover {
+    transform: scale(1.02);
+}
+
+.secundarias img {
+    width: 100%;
+    display: block;
+    border-radius: 16px;
+    margin-bottom: 8px;
+}
+
+.secundarias h4 {
+    font-size: 0.8rem;
+    line-height: 1.2;
+}
+
+/* ==========================
+   SECCIÓN PRÓXIMAS CARRERAS
+===========================*/
+.proximas-carreras {
+    margin-top: 50px;
+}
+
+.carreras-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* Card de carrera */
+.carrera {
+    background-color: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Foto circuito */
+.carrera > img {
+    width: 100%;
+    display: block;
+    border-radius: 24px 24px 0 0;
+}
+
+/* Parte inferior: info + bandera */
+.carrera .info-carrera {
+    padding: 14px 18px 18px;
+}
+
+.carrera .info-carrera h3 {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.carrera .info-carrera p {
+    font-size: 0.9rem;
+}
+
+.carrera .bandera-carrera {
+    margin-left: auto;
+    padding: 0 18px 18px;
+}
+
+.carrera .bandera-carrera img {
+    height: 44px;
+    width: auto;
+    display: block;
+}
+
+/* ==========================
+   SECCIÓN CLASIFICACIÓN
+===========================*/
+.clasificacion {
+    margin-top: 60px;
+}
+
+.clasificacion h3 {
+    margin-top: 24px;
+    margin-bottom: 10px;
+}
+
+/* Tablas generales */
+.clasificacion table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 28px;
+    font-size: 0.9rem;
+    border-radius: 12px;
+    overflow: hidden;  /* para que el borde redondo afecte a todo */
+}
+
+/* Encabezado negro */
+.clasificacion thead {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.clasificacion th,
+.clasificacion td {
+    padding: 10px 14px;
+    text-align: left;
+}
+
+.clasificacion tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+.clasificacion tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.clasificacion tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+/* ==========================
+   SECCIÓN PILOTOS F1
+===========================*/
+.pilotos-f1 {
+    margin-top: 60px;
+}
+
+.pilotos-equipos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+/* Card por escudería */
+.equipo-pilotos {
+    border-radius: 18px;
+    overflow: hidden;
+    border: 2px solid #dddddd;
+    background-color: #ffffff;
+}
+
+/* Encabezado (nombre del equipo) */
+.equipo-pilotos > h3 {
+    text-align: center;
+    padding: 8px 10px;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+/* Colores distintos por equipo usando posición */
+.pilotos-equipos .equipo-pilotos:nth-child(1) > h3 { background-color: #e10600; } /* Ferrari */
+.pilotos-equipos .equipo-pilotos:nth-child(2) > h3 { background-color: #ff9f1c; } /* McLaren */
+.pilotos-equipos .equipo-pilotos:nth-child(3) > h3 { background-color: #00b0b9; } /* Mercedes */
+.pilotos-equipos .equipo-pilotos:nth-child(4) > h3 { background-color: #007f5f; } /* Aston Martin */
+.pilotos-equipos .equipo-pilotos:nth-child(5) > h3 { background-color: #004a9f; } /* Racing Bulls */
+.pilotos-equipos .equipo-pilotos:nth-child(6) > h3 { background-color: #e34234; } /* Haas */
+.pilotos-equipos .equipo-pilotos:nth-child(7) > h3 { background-color: #ff9ecb; } /* Alpine */
+.pilotos-equipos .equipo-pilotos:nth-child(8) > h3 { background-color: #ff8c42; } /* Williams */
+
+/* Grid interno de pilotos (2 columnas) */
+.pilotos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-top: 1px solid #dddddd;
+}
+
+/* Card de piloto individual */
+.piloto {
+    padding: 10px 10px 12px;
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    row-gap: 4px;
+    text-align: center;
+}
+
+/* Foto piloto */
+.piloto > img:first-child {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Número de auto */
+.piloto .numero {
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+/* Nombre */
+.piloto .nombre {
+    font-size: 0.9rem;
+}
+
+/* Bandera pequeña */
+.bandera-piloto {
+    height: 20px;
+    width: auto;
+    margin: 0 auto;
+}
+
+/* ==========================
+   SECCIÓN EQUIPOS F1
+===========================*/
+.equipos-f1 {
+    margin-top: 60px;
+}
+
+.equipos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* Card de equipo */
+.equipo-card {
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Foto del coche */
+.equipo-card > img {
+    width: 100%;
+    display: block;
+}
+
+/* Banda inferior negra con nombre + logo */
+.equipo-info {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.equipo-info h3 {
+    font-size: 1.1rem;
+}
+
+/* Logo del equipo blanco */
+.logo-equipo {
+    height: 40px;
+    width: auto;
+}
+
+/* ==========================
+   RESPONSIVE
+===========================*/
+@media (max-width: 960px) {
+    main {
+        padding: 30px 16px 60px;
+    }
+
+    .menu ul {
+        gap: 32px;
+        font-size: 1.2rem;
+    }
+
+    .secundarias {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .carreras-grid,
+    .pilotos-equipos,
+    .equipos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Dropdown un poco más pegado al menú */
+    .dropdown-menu {
+        margin-top: 8px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 18px 16px 22px;
+        gap: 12px;
+    }
+
+    .navbar .logo img {
+        height: 90px;
+    }
+
+    .menu ul {
+        gap: 18px;
+        font-size: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    /* Centrar dropdown en pantallas pequeñas */
+    .dropdown-menu {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

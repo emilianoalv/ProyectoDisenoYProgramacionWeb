@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias</title>
+
+    <!-- Fuente Sansation -->
+    <link href="https://fonts.cdnfonts.com/css/sansation" rel="stylesheet">
+
+    <!-- Hoja de estilos general -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="C:\Users\alfon\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\Diseño y progrmación web\Imagenes\Logo-F1.png" alt="LogoF1">
+        </div>
+    
+        <!-- MENÚ -->
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="noticias.html"class="activo">Noticias</a></li>
+
+                <!-- ACTIVIDADES CON DESPLEGABLE -->
+                <li class="dropdown">
+                    <a href="actividades.html">
+                        Actividades <span class="arrow">▾</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- Ajusta los href a los nombres reales de tus archivos -->
+                        <li><a href="clasificacion.html">Clasificación</a></li>
+                        <li><a href="calendario-gp.html">Calendario grandes premios</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="tienda-principal.html">Tienda</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+        <!-- TÍTULO PRINCIPAL DE LA PÁGINA -->
+        <section class="encabezado-noticias">
+            <h1>Noticias de Fórmula 1</h1>
+            <div class="section-underline"></div>
+        </section>
+
+        <!-- SECCIÓN PRINCIPAL -->
+        <section class="bloque-principal">
+            <h2>Principal</h2>
+
+            <div class="principal-layout">
+                <!-- Noticia principal grande -->
+                <article class="noticia-principal">
+                    <figure>
+                        <img src="C:\Users\alfon\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\Diseño y progrmación web\Proyecto - Página web Formula1\Noticias\Principal.jpg" alt="Auto de Fórmula 1 en pista">
+                        <a href="ejemplo-noticia.html">
+                        <h3>Escándalo en los pits: la estrategia que dejó sin podio al favorito</h3>
+                        </a>
+                    </figure>
+                </article>
+
+                <!-- Otras noticias principales a la derecha -->
+                <div class="noticias-principales-laterales">
+
+                    <article class="noticia-card">
+                        <figure>
+                            <img src="img/noticias/secundaria1.jpg" alt="Exhibición de Fórmula 1 en Madrid">
+                        </figure>
+                        <h3>El rugido de la historia: inauguran una exhibición única de Fórmula 1 en Madrid</h3>
+                    </article>
+
+                    <article class="noticia-card">
+                        <figure>
+                            <img src="img/noticias/secundaria2.jpg" alt="Safety Car cambia la carrera">
+                        </figure>
+                        <h3>¡Increíble! Un Safety Car cambió todo: la carrera más caótica de la temporada de F1</h3>
+                    </article>
+
+                    <article class="noticia-card">
+                        <figure>
+                            <img src="img/noticias/secundaria3.jpg" alt="Auto más rápido de la F1">
+                        </figure>
+                        <h3>Récord histórico: el auto más rápido de la Fórmula 1 sorprende al mundo</h3>
+                    </article>
+
+                    <article class="noticia-card">
+                        <figure>
+                            <img src="img/noticias/secundaria4.jpg" alt="Choque múltiple en la primera curva">
+                        </figure>
+                        <h3>Choque múltiple en la primera curva: la parrilla queda patas arriba</h3>
+                    </article>
+
+                </div>
+            </div>
+
+            <!-- Texto de la noticia principal -->
+            <article class="noticia-texto-principal">
+                <h2>Escándalo en los pits: la estrategia que dejó sin podio al favorito</h2>
+                <p>
+                    Una parada mal calculada arruinó los planes del piloto que lideraba gran parte de la carrera.
+                    La decisión del equipo ha levantado polémica y críticas dentro y fuera del paddock.
+                </p>
+            </article>
+        </section>
+
+        <!-- SECCIÓN MÁS NOTICIAS -->
+        <section class="mas-noticias">
+            <h2>Más noticias</h2>
+            <div class="section-underline-negra"></div>
+
+            <div class="mas-noticias-lista">
+
+                <!-- Noticia 1 -->
+                <article class="mas-noticia-card">
+                    <figure class="mas-noticia-imagen">
+                        <img src="img/noticias/mas1.jpg" alt="Podio Norris, Verstappen y Piastri">
+                    </figure>
+                    <div class="mas-noticia-contenido">
+                        <h3>Norris, gran pole que pone contra las cuerdas a Verstappen y Piastri; Sainz bestial con el 7º tiempo</h3>
+                        <p>
+                            Lando da un paso de gigante para colocarse líder del Mundial, Max.
+                        </p>
+                    </div>
+                </article>
+
+                 <!-- Noticia 2 -->
+                <article class="mas-noticia-card">
+                    <figure class="mas-noticia-imagen">
+                        <img src="img/noticias/mas2.jpg" alt="Auto en el GP de México">
+                    </figure>
+                    <div class="mas-noticia-contenido">
+                        <h3>A qué hora es la carrera de F1 del GP de México: horario, parrilla y dónde ver en TV a Alonso y Sainz</h3>
+                        <p>
+                            Descubre dónde ver y a qué hora comienza la carrera en el Autódromo de los Hermanos Rodríguez.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Noticia 3 -->
+                <article class="mas-noticia-card">
+                    <figure class="mas-noticia-imagen">
+                        <img src="img/noticias/mas3.jpg" alt="Hamilton y piloto en el pit lane">
+                    </figure>
+                    <div class="mas-noticia-contenido">
+                        <h3>Hamilton lanza un aviso para la carrera: "Seré agresivo, no tengo nada que perder"</h3>
+                        <p>
+                            El británico logra su mejor clasificación del año con Ferrari y avisa antes de la carrera en México:
+                            "No tengo nada que perder". La sonrisa ha vuelto al '44'.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Noticia 4 -->
+                <article class="mas-noticia-card">
+                    <figure class="mas-noticia-imagen">
+                        <img src="img/noticias/mas4.jpg" alt="Pilotos conversando tras la clasificación">
+                    </figure>
+                    <div class="mas-noticia-contenido">
+                        <h3>Clasificación, parrilla y pole del Gran Premio de México de Fórmula 1</h3>
+                        <p>
+                            Sigue el minuto a minuto de la sesión de clasificación del Gran Premio de México.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
