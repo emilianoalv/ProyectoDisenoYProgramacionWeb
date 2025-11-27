@@ -239,16 +239,16 @@ h3 {
 
 /* Parte inferior: info + bandera */
 .carrera .info-carrera {
-    padding: 14px 18px 18px;
+    padding: 15px 15px 18px;
 }
 
-.carrera .info-carrera h3 {
+.carrera .info-carrera h6 {
     font-size: 1.1rem;
     margin-bottom: 4px;
 }
 
 .carrera .info-carrera p {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
 }
 
 .carrera .bandera-carrera {

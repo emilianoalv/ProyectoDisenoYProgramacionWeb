@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAST - Clasificación F1</title>
+
+    <!-- Fuente general -->
+    <link href="https://fonts.cdnfonts.com/css/sansation" rel="stylesheet">
+
+    <!-- Hoja de estilos global -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- MENÚ -->
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+
+                <!-- ACTIVIDADES CON DESPLEGABLE -->
+                <li class="dropdown">
+                    <a href="actividades.html">
+                        Actividades <span class="arrow">▾</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- Ajusta los href a los nombres reales de tus archivos -->
+                        <li><a href="clasificacion.html"class="activo">Clasificación</a></li>
+                        <li><a href="calendario-gp.html">Calendario grandes premios</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="tienda-principal.html">Tienda</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+        <!-- TÍTULO PRINCIPAL -->
+        <section class="encabezado-clasificacion">
+            <h1>Clasificación</h1>
+            <div class="section-underline"></div>
+        </section>
+
+        <!-- TABLA PILOTOS -->
+        <section class="clasificacion-pilotos">
+            <h2>Pilotos</h2>
+
+            <table class="tabla-clasificacion tabla-pilotos">
+                <thead>
+                    <tr>
+                        <th>Pos</th>
+                        <th>Nombre</th>
+                        <th>Puntos</th>
+                        <th>
+                            AU<br>
+                            <img src="img/banderas/australia.png" alt="Australia">
+                        </th>
+                        <th>
+                            CH<br>
+                            <img src="img/banderas/china.png" alt="China">
+                        </th>
+                        <th>
+                            JP<br>
+                            <img src="img/banderas/japon.png" alt="Japón">
+                        </th>
+                        <th>
+                            BH<br>
+                            <img src="img/banderas/bahrein.png" alt="Bahréin">
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 1 -->
+                    <tr>
+                        <td>1</td>
+                        <td class="piloto">
+                            <span>Max Verstappen</span>
+                            <img src="img/pilotos/max-verstappen.png" alt="Max Verstappen">
+                        </td>
+                        <td>336</td>
+                        <td>26</td>
+                        <td>33</td>
+                        <td>25</td>
+                        <td>30</td>
+                    </tr>
+                    <!-- 2 -->
+                    <tr>
+                        <td>2</td>
+                        <td class="piloto">
+                            <span>Lando Norris</span>
+                            <img src="img/pilotos/lando-norris.png" alt="Lando Norris">
+                        </td>
+                        <td>314</td>
+                        <td>33</td>
+                        <td>30</td>
+                        <td>24</td>
+                        <td>29</td>
+                    </tr>
+                    <!-- 3 -->
+                    <tr>
+                        <td>3</td>
+                        <td class="piloto">
+                            <span>Charles Leclerc</span>
+                            <img src="img/pilotos/charles-leclerc.png" alt="Charles Leclerc">
+                        </td>
+                        <td>273</td>
+                        <td>23</td>
+                        <td>32</td>
+                        <td>32</td>
+                        <td>31</td>
+                    </tr>
+                    <!-- 4 -->
+                    <tr>
+                        <td>4</td>
+                        <td class="piloto">
+                            <span>Oscar Piastri</span>
+                            <img src="img/pilotos/oscar-piastri.png" alt="Oscar Piastri">
+                        </td>
+                        <td>237</td>
+                        <td>25</td>
+                        <td>27</td>
+                        <td>33</td>
+                        <td>27</td>
+                    </tr>
+                    <!-- 5 -->
+                    <tr>
+                        <td>5</td>
+                        <td class="piloto">
+                            <span>Carlos Sainz</span>
+                            <img src="img/pilotos/carlos-sainz.png" alt="Carlos Sainz">
+                        </td>
+                        <td>173</td>
+                        <td>30</td>
+                        <td>27</td>
+                        <td>25</td>
+                        <td>21</td>
+                    </tr>
+                    <!-- 6 -->
+                    <tr>
+                        <td>6</td>
+                        <td class="piloto">
+                            <span>George Russell</span>
+                            <img src="img/pilotos/george-russell.png" alt="George Russell">
+                        </td>
+                        <td>140</td>
+                        <td>4</td>
+                        <td>12</td>
+                        <td>7</td>
+                        <td>10</td>
+                    </tr>
+                    <!-- 7 -->
+                    <tr>
+                        <td>7</td>
+                        <td class="piloto">
+                            <span>Lewis Hamilton</span>
+                            <img src="img/pilotos/lewis-hamilton.png" alt="Lewis Hamilton">
+                        </td>
+                        <td>138</td>
+                        <td>1</td>
+                        <td>10</td>
+                        <td>13</td>
+                        <td>15</td>
+                    </tr>
+                    <!-- 8 -->
+                    <tr>
+                        <td>8</td>
+                        <td class="piloto">
+                            <span>Sergio Pérez</span>
+                            <img src="img/pilotos/sergio-perez.png" alt="Sergio Pérez">
+                        </td>
+                        <td>137</td>
+                        <td>18</td>
+                        <td>18</td>
+                        <td>18</td>
+                        <td>10</td>
+                    </tr>
+                    <!-- 9 -->
+                    <tr>
+                        <td>9</td>
+                        <td class="piloto">
+                            <span>Fernando Alonso</span>
+                            <img src="img/pilotos/fernando-alonso.png" alt="Fernando Alonso">
+                        </td>
+                        <td>134</td>
+                        <td>12</td>
+                        <td>8</td>
+                        <td>7</td>
+                        <td>2</td>
+                    </tr>
+                    <!-- 10 -->
+                    <tr>
+                        <td>10</td>
+                        <td class="piloto">
+                            <span>Pierre Gasly</span>
+                            <img src="img/pilotos/pierre-gasly.png" alt="Pierre Gasly">
+                        </td>
+                        <td>130</td>
+                        <td>6</td>
+                        <td>17</td>
+                        <td>10</td>
+                        <td>23</td>
+                    </tr>
+                    <!-- 11 -->
+                    <tr>
+                        <td>11</td>
+                        <td class="piloto">
+                            <span>Nico Hülkenberg</span>
+                            <img src="img/pilotos/nico-hulkenberg.png" alt="Nico Hülkenberg">
+                        </td>
+                        <td>129</td>
+                        <td>RET</td>
+                        <td>2</td>
+                        <td>RET</td>
+                        <td>24</td>
+                    </tr>
+                    <!-- 12 -->
+                    <tr>
+                        <td>12</td>
+                        <td class="piloto">
+                            <span>Yuki Tsunoda</span>
+                            <img src="img/pilotos/yuki-tsunoda.png" alt="Yuki Tsunoda">
+                        </td>
+                        <td>127</td>
+                        <td>6</td>
+                        <td>RET</td>
+                        <td>RET</td>
+                        <td>15</td>
+                    </tr>
+                    <!-- 13 -->
+                    <tr>
+                        <td>13</td>
+                        <td class="piloto">
+                            <span>Lance Stroll</span>
+                            <img src="img/pilotos/lance-stroll.png" alt="Lance Stroll">
+                        </td>
+                        <td>113</td>
+                        <td>RET</td>
+                        <td>4</td>
+                        <td>1</td>
+                        <td>3</td>
+                    </tr>
+                    <!-- 14 -->
+                    <tr>
+                        <td>14</td>
+                        <td class="piloto">
+                            <span>Esteban Ocon</span>
+                            <img src="img/pilotos/esteban-ocon.png" alt="Esteban Ocon">
+                        </td>
+                        <td>102</td>
+                        <td>RET</td>
+                        <td>2</td>
+                        <td>25</td>
+                        <td>22</td>
+                    </tr>
+                    <!-- 15 -->
+                    <tr>
+                        <td>15</td>
+                        <td class="piloto">
+                            <span>Kevin Magnussen</span>
+                            <img src="img/pilotos/kevin-magnussen.png" alt="Kevin Magnussen">
+                        </td>
+                        <td>94</td>
+                        <td>10</td>
+                        <td>21</td>
+                        <td>13</td>
+                        <td>9</td>
+                    </tr>
+                    <!-- 16 -->
+                    <tr>
+                        <td>16</td>
+                        <td class="piloto">
+                            <span>Alexander Albon</span>
+                            <img src="img/pilotos/alex-albon.png" alt="Alexander Albon">
+                        </td>
+                        <td>90</td>
+                        <td>5</td>
+                        <td>22</td>
+                        <td>22</td>
+                        <td>28</td>
+                    </tr>
+                    <!-- 17 -->
+                    <tr>
+                        <td>17</td>
+                        <td class="piloto">
+                            <span>Daniel Ricciardo</span>
+                            <img src="img/pilotos/daniel-ricciardo.png" alt="Daniel Ricciardo">
+                        </td>
+                        <td>75</td>
+                        <td>3</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>23</td>
+                    </tr>
+                    <!-- 18 -->
+                    <tr>
+                        <td>18</td>
+                        <td class="piloto">
+                            <span>Oliver Bearman</span>
+                            <img src="img/pilotos/oliver-bearman.png" alt="Oliver Bearman">
+                        </td>
+                        <td>70</td>
+                        <td>2</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>20</td>
+                    </tr>
+                    <!-- 19 -->
+                    <tr>
+                        <td>19</td>
+                        <td class="piloto">
+                            <span>Franco Colapinto</span>
+                            <img src="img/pilotos/franco-colapinto.png" alt="Franco Colapinto">
+                        </td>
+                        <td>65</td>
+                        <td>7</td>
+                        <td>20</td>
+                        <td>9</td>
+                        <td>7</td>
+                    </tr>
+                    <!-- 20 -->
+                    <tr>
+                        <td>20</td>
+                        <td class="piloto">
+                            <span>Guanyu Zhou</span>
+                            <img src="img/pilotos/guanyu-zhou.png" alt="Guanyu Zhou">
+                        </td>
+                        <td>50</td>
+                        <td>8</td>
+                        <td>15</td>
+                        <td>8</td>
+                        <td>23</td>
+                    </tr>
+                    <!-- 21 -->
+                    <tr>
+                        <td>21</td>
+                        <td class="piloto">
+                            <span>Valtteri Bottas</span>
+                            <img src="img/pilotos/valtteri-bottas.png" alt="Valtteri Bottas">
+                        </td>
+                        <td>30</td>
+                        <td>9</td>
+                        <td>14</td>
+                        <td>5</td>
+                        <td>3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- TABLA EQUIPOS -->
+        <section class="clasificacion-equipos">
+            <h2>Equipos</h2>
+
+            <table class="tabla-clasificacion tabla-equipos">
+                <thead>
+                    <tr>
+                        <th>Pos</th>
+                        <th>Equipo</th>
+                        <th>Puntos</th>
+                        <th>
+                            AU<br>
+                            <img src="img/banderas/australia.png" alt="Australia">
+                        </th>
+                        <th>
+                            CH<br>
+                            <img src="img/banderas/china.png" alt="China">
+                        </th>
+                        <th>
+                            JP<br>
+                            <img src="img/banderas/japon.png" alt="Japón">
+                        </th>
+                        <th>
+                            BH<br>
+                            <img src="img/banderas/bahrein.png" alt="Bahréin">
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 1 -->
+                    <tr>
+                        <td>1</td>
+                        <td class="equipo">
+                            <span>Red Bull</span>
+                            <img src="img/logos/red-bull.png" alt="Red Bull">
+                        </td>
+                        <td>666</td>
+                        <td>27</td>
+                        <td>14</td>
+                        <td>27</td>
+                        <td>20</td>
+                    </tr>
+                    <!-- 2 -->
+                    <tr>
+                        <td>2</td>
+                        <td class="equipo">
+                            <span>Aston Martin</span>
+                            <img src="img/logos/aston-martin.png" alt="Aston Martin">
+                        </td>
+                        <td>652</td>
+                        <td>27</td>
+                        <td>27</td>
+                        <td>31</td>
+                        <td>22</td>
+                    </tr>
+                    <!-- 3 -->
+                    <tr>
+                        <td>3</td>
+                        <td class="equipo">
+                            <span>Ferrari</span>
+                            <img src="img/logos/ferrari.png" alt="Ferrari">
+                        </td>
+                        <td>589</td>
+                        <td>5</td>
+                        <td>44</td>
+                        <td>54</td>
+                        <td>60</td>
+                    </tr>
+                    <!-- 4 -->
+                    <tr>
+                        <td>4</td>
+                        <td class="equipo">
+                            <span>McLaren</span>
+                            <img src="img/logos/mclaren.png" alt="McLaren">
+                        </td>
+                        <td>488</td>
+                        <td>18</td>
+                        <td>10</td>
+                        <td>18</td>
+                        <td>40</td>
+                    </tr>
+                    <!-- 5 -->
+                    <tr>
+                        <td>5</td>
+                        <td class="equipo">
+                            <span>Mercedes</span>
+                            <img src="img/logos/mercedes.png" alt="Mercedes">
+                        </td>
+                        <td>453</td>
+                        <td>10</td>
+                        <td>8</td>
+                        <td>7</td>
+                        <td>6</td>
+                    </tr>
+                    <!-- 6 -->
+                    <tr>
+                        <td>6</td>
+                        <td class="equipo">
+                            <span>Williams</span>
+                            <img src="img/logos/williams.png" alt="Williams">
+                        </td>
+                        <td>102</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>23</td>
+                        <td>22</td>
+                    </tr>
+                    <!-- 7 -->
+                    <tr>
+                        <td>7</td>
+                        <td class="equipo">
+                            <span>Racing Bulls</span>
+                            <img src="img/logos/racing-bulls.png" alt="Racing Bulls">
+                        </td>
+                        <td>72</td>
+                        <td>8</td>
+                        <td>0</td>
+                        <td>9</td>
+                        <td>10</td>
+                    </tr>
+                    <!-- 8 -->
+                    <tr>
+                        <td>8</td>
+                        <td class="equipo">
+                            <span>Kick Sauber</span>
+                            <img src="img/logos/kick-sauber.png" alt="Kick Sauber">
+                        </td>
+                        <td>68</td>
+                        <td>6</td>
+                        <td>1</td>
+                        <td>10</td>
+                        <td>13</td>
+                    </tr>
+                    <!-- 9 -->
+                    <tr>
+                        <td>9</td>
+                        <td class="equipo">
+                            <span>Haas</span>
+                            <img src="img/logos/haas.png" alt="Haas">
+                        </td>
+                        <td>55</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>18</td>
+                        <td>3</td>
+                    </tr>
+                    <!-- 10 -->
+                    <tr>
+                        <td>10</td>
+                        <td class="equipo">
+                            <span>Alpine</span>
+                            <img src="img/logos/alpine.png" alt="Alpine">
+                        </td>
+                        <td>46</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>20</td>
+                        <td>5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+</body>
+</html>

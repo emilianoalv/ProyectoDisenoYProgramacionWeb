@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+
+    <!-- Fuente y CSS general -->
+    <link href="https://fonts.cdnfonts.com/css/sansation" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="C:\Users\alfon\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\Diseño y progrmación web\Imagenes\Logo-F1.png" alt="LogoF1">
+        </div>
+    
+        <!-- MENÚ -->
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+
+                <!-- ACTIVIDADES CON DESPLEGABLE -->
+                <li class="dropdown">
+                    <a href="actividades.html">
+                        Actividades <span class="arrow">▾</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- Ajusta los href a los nombres reales de tus archivos -->
+                        <li><a href="clasificacion.html">Clasificación</a></li>
+                        <li><a href="calendario-gp.html">Calendario grandes premios</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="tienda-principal.html"class="activo">Tienda</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+        <!-- SECCIÓN TIENDA -->
+        <section id="tienda" class="tienda">
+
+            <!-- Título + carrito -->
+            <div class="tienda-header">
+                <div class="tienda-titulo">
+                    <h1>Tienda</h1>
+                    <div class="section-underline"></div>
+                </div>
+
+                <button class="carrito-btn" aria-label="Ver carrito">
+                    <img src="img/icons/icon-carrito.png" alt="Icono carrito">
+                    <!-- Puntito rojo de notificación (lo manejas por CSS) -->
+                    <span class="carrito-badge"></span>
+                </button>
+            </div>
+
+            <!-- GRID DE PRODUCTOS -->
+            <div class="productos-grid">
+
+                <!-- Fila 1 -->
+                <article class="producto">
+                    <img src="img/tienda/gorra-azul.jpg" alt="Gorra Fórmula 1 Azul">
+                    <h3>Gorra Fórmula 1 Azul</h3>
+                    <p class="precio">39,90 €</p>
+                </article>
+
+                <article class="producto">
+                    <img src="img/tienda/sudadera-negra.jpg" alt="Sudadera Fórmula 1 Negra">
+                    <h3>Sudadera Fórmula 1 Negra</h3>
+                    <p class="precio">79,90 €</p>
+                </article>
+
+                <article class="producto">
+                    <img src="img/tienda/gorra-verde.jpg" alt="Gorra Fórmula 1 Verde">
+                    <h3>Gorra Fórmula 1 Verde</h3>
+                    <p class="precio">39,90 €</p>
+                </article>
+
+                <!-- Fila 2 -->
+                <article class="producto">
+                    <img src="img/tienda/camiseta-negra.jpg" alt="Camiseta Fórmula 1 Negra">
+                    <h3>Camiseta Fórmula 1 Negra</h3>
+                    <p class="precio">69,90 €</p>
+                </article>
+
+                <article class="producto">
+                    <img src="img/tienda/camiseta-redbull.jpg" alt="Camiseta Fórmula 1 Red Bull">
+                    <h3>Camiseta Fórmula 1 Red Bull</h3>
+                    <p class="precio">69,90 €</p>
+                </article>
+
+                <article class="producto">
+                    <img src="img/tienda/camiseta-ferrari.jpg" alt="Camiseta Fórmula 1 Ferrari">
+                    <h3>Camiseta Fórmula 1 Ferrari</h3>
+                    <p class="precio">69,90 €</p>
+                </article>
+
+                <!-- Fila 3 -->
+                <article class="producto">
+                    <img src="img/tienda/gorra-negra.jpg" alt="Gorra Fórmula 1 Negra">
+                    <h3>Gorra Fórmula 1 Negra</h3>
+                    <p class="precio">39,90 €</p>
+                </article>
+
+                <article class="producto">
+                    <img src="img/tienda/balon-naranja.jpg" alt="Balón Fórmula 1 Naranja">
+                    <h3>Balón Fórmula 1 Naranja</h3>
+                    <p class="precio">30,90 €</p>
+                </article>
+
+                <article class="producto">
+                    <img src="img/tienda/camisa-mercedes.jpg" alt="Camisa Fórmula 1 Mercedes">
+                    <h3>Camisa Fórmula 1 Mercedes</h3>
+                    <p class="precio">80,90 €</p>
+                </article>
+
+                <!-- Fila 4 -->
+                <article class="producto">
+                    <img src="img/tienda/casco-redbull.jpg" alt="Casco Fórmula 1 Red Bull">
+                    <h3>Casco Fórmula 1 Red Bull</h3>
+                    <p class="precio">129,90 €</p>
+                </article>
+
+                <article class="producto">
+                    <img src="img/tienda/casco-mclaren.jpg" alt="Casco Fórmula 1 McLaren">
+                    <h3>Casco Fórmula 1 McLaren</h3>
+                    <p class="precio">129,90 €</p>
+                </article>
+
+                <article class="producto">
+                    <img src="img/tienda/llavero-negro.jpg" alt="Llavero Fórmula 1 Negro">
+                    <h3>Llavero Fórmula 1 Negro</h3>
+                    <p class="precio">15,90 €</p>
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

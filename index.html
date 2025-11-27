@@ -1,0 +1,456 @@
+<link href="https://fonts.cdnfonts.com/css/sansation" rel="stylesheet">
+<style>
+@import url('https://fonts.cdnfonts.com/css/sansation');
+</style>                
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href = "style.css">
+</head>
+<body>
+
+<!-- NavBar-->    
+
+<header class="navbar">
+        <div class="logo">
+            <img src="C:\Users\alfon\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\Diseño y progrmación web\Imagenes\Logo-F1.png" alt="LogoF1">
+        </div>
+    
+        <!-- MENÚ -->
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html"class="activo">Inicio</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+
+                <!-- ACTIVIDADES CON DESPLEGABLE -->
+                <li class="dropdown">
+                    <a href="actividades.html">
+                        Actividades <span class="arrow">▾</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- Ajusta los href a los nombres reales de tus archivos -->
+                        <li><a href="clasificacion.html">Clasificación</a></li>
+                        <li><a href="calendario-gp.html">Calendario grandes premios</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="tienda-principal.html">Tienda</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+<!-- Seccion para las noticias-->
+
+<section class="noticias">
+    <h2>Noticias</h2>
+
+    <div class="principal">
+        <img src="C:\Users\alfon\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\Diseño y progrmación web\Imagenes\Noticias\Principal.jpg" alt="Noticia principal">
+        <h3>Escándalo en los pits: la estrategia que dejó sin podio al favorito</h3>
+        <p class="descripcion">
+            Una parada mal calculada arruinó los planes del piloto que lideraba gran parte de la carrera. 
+            La decisión del equipo ha levantado polémica y críticas dentro y fuera del paddock.
+        </p>
+    </div>
+
+
+<!-- Seccion para las secundarias-->
+
+    <div class="secundarias">
+        <article>
+            <img src="C:\Users\alfon\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\Diseño y progrmación web\Imagenes\Noticias\Secundaria 1.jpg" alt="Noticia secundaria 1">
+            <h4>El rugido de la historia: inauguran una exhibición única de Fórmula 1 en Madrid</h4>
+        </article>
+
+        <article>
+            <img src="C:\Users\alfon\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\Diseño y progrmación web\Imagenes\Noticias\Secundaria 2.jpg" alt ="Noticias secundaria 2">
+            <h4>¡Increíble! Un Safety Car cambió todo: la carrera más caótica de la temporada de F1</h4>
+        </article>
+
+        <article>   
+            <img src="C:\Users\alfon\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\Diseño y progrmación web\Imagenes\Noticias\Secundaria 3.jpg" alt="Noticias secundaria 3">
+            <h4>Récord histórico: el auto más rápido de la Fórmula 1 sorprende al mundo</h4>
+        </article>
+
+        
+        <article>   
+            <img src="C:\Users\alfon\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\Diseño y progrmación web\Imagenes\Noticias\Secundaria 4.jpg" alt="Noticias secundaria 4">
+            <h4>Choque múltiple en la primera curva: la parrilla queda patas arriba</h4>
+        </article>
+    </div>
+</section>
+
+<!-- Sección de las próximas carreras id="proximas-carreras"-->
+
+<section class="proximas-carreras">
+    <h2>Próximas carreras</h2>
+    <div class="section-underline"></div>
+
+    <div class="carreras-grid">
+
+        <!-- GP Australia -->
+        <article class="carrera">
+            <img src="images/carreras/gp-australia.jpg" alt="Circuito de Australia">
+            <div class="info-carrera">
+                <h3>GP de Australia</h3>
+                <p>Circuito de Albert Park</p>
+                <p>Mar 16</p>
+            </div>
+            <div class="bandera-carrera">
+                <img src="images/banderas/AU.jpg" alt="Bandera de Australia">
+            </div>
+        </article>
+
+        <!-- GP China -->
+        <article class="carrera">
+            <img src="images/carreras/gp-china.jpg" alt="Circuito de China">
+            <div class="info-carrera">
+                <h3>GP de China</h3>
+                <p>Circuito de Shanghái</p>
+                <p>Mar 23</p>
+            </div>
+            <div class="bandera-carrera">
+                <img src="images/banderas/CN.jpg" alt="Bandera de China">
+            </div>
+        </article>
+
+        <!-- GP Japón -->
+        <article class="carrera">
+            <img src="images/carreras/gp-japon.jpg" alt="Circuito de Suzuka">
+            <div class="info-carrera">
+                <h3>GP de Japón</h3>
+                <p>Circuito de Suzuka</p>
+                <p>Abr 6</p>
+            </div>
+            <div class="bandera-carrera">
+                <img src="images/banderas/JP.jpg" alt="Bandera de Japón">
+            </div>
+        </article>
+
+         <!-- GP Bahréin -->
+        <article class="carrera">
+            <img src="images/carreras/gp-bahrein.jpg" alt="Circuito de Bahréin">
+            <div class="info-carrera">
+                <h3>GP de Bahréin</h3>
+                <p>Circuito de Bahréin</p>
+                <p>Abr 13</p>
+            </div>
+            <div class="bandera-carrera">
+                <img src="images/banderas/BH.jpg" alt="Bandera de Bahréin">
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- SECCIÓN CLASIFICACIÓN -->
+<section id="clasificacion" class="clasificacion">
+    <h2>Clasificación</h2>
+    <div class="section-underline"></div>
+
+    <!-- Clasificación Pilotos -->
+    <h3>Pilotos</h3>
+    <table class="tabla-pilotos">
+        <thead>
+            <tr>
+                <th>Posición</th>
+                <th>Nombre</th>
+                <th>Equipo</th>
+                <th>Puntos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Max Verstappen</td>
+                <td>Red Bull</td>
+                <td>437</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Lando Norris</td>
+                <td>McLaren</td>
+                <td>374</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Charles Leclerc</td>
+                <td>Ferrari</td>
+                <td>356</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Oscar Piastri</td>
+                <td>McLaren</td>
+                <td>292</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Carlos Sainz</td>
+                <td>Ferrari</td>
+                <td>290</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Clasificación Equipos -->
+    <h3>Equipos</h3>
+    <table class="tabla-equipos">
+        <thead>
+            <tr>
+                <th>Posición</th>
+                <th>Equipo</th>
+                <th>Puntos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Red Bull</td>
+                <td>666</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Aston Martin</td>
+                <td>652</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Ferrari</td>
+                <td>589</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>McLaren</td>
+                <td>488</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Mercedes</td>
+                <td>453</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- SECCIÓN PILOTOS F1 -->
+<section id="pilotos" class="pilotos-f1">
+    <h2>Pilotos de Fórmula 1</h2>
+    <div class="section-underline"></div>
+
+    <div class="pilotos-equipos">
+
+        <!-- Ferrari -->
+        <article class="equipo-pilotos">
+            <h3>Ferrari</h3>
+            <div class="pilotos-grid">
+                <div class="piloto">
+                    <img src="img/pilotos/charles-leclerc.png" alt="Charles Leclerc">
+                    <p class="numero">16</p>
+                    <p class="nombre">Charles Leclerc</p>
+                    <img src="img/banderas/monaco.png" alt="Bandera de Mónaco" class="bandera-piloto">
+                </div>
+                <div class="piloto">
+                    <img src="img/pilotos/lewis-hamilton-ferrari.png" alt="Lewis Hamilton">
+                    <p class="numero">44</p>
+                    <p class="nombre">Lewis Hamilton</p>
+                    <img src="img/banderas/reino-unido.png" alt="Bandera del Reino Unido" class="bandera-piloto">
+                </div>
+            </div>
+        </article>
+
+        <!-- McLaren -->
+        <article class="equipo-pilotos">
+            <h3>McLaren</h3>
+            <div class="pilotos-grid">
+                <div class="piloto">
+                    <img src="img/pilotos/lando-norris.png" alt="Lando Norris">
+                    <p class="numero">4</p>
+                    <p class="nombre">Lando Norris</p>
+                    <img src="img/banderas/reino-unido.png" alt="Bandera del Reino Unido" class="bandera-piloto">
+                </div>
+                <div class="piloto">
+                    <img src="img/pilotos/oscar-piastri.png" alt="Oscar Piastri">
+                    <p class="numero">81</p>
+                    <p class="nombre">Oscar Piastri</p>
+                    <img src="img/banderas/australia.png" alt="Bandera de Australia" class="bandera-piloto">
+                </div>
+            </div>
+        </article>
+
+        <!-- Mercedes -->
+        <article class="equipo-pilotos">
+            <h3>Mercedes</h3>
+            <div class="pilotos-grid">
+                <div class="piloto">
+                    <img src="img/pilotos/george-russell.png" alt="George Russell">
+                    <p class="numero">63</p>
+                    <p class="nombre">George Russell</p>
+                    <img src="img/banderas/reino-unido.png" alt="Bandera del Reino Unido" class="bandera-piloto">
+                </div>
+                <div class="piloto">
+                    <img src="img/pilotos/kimi-antonelli.png" alt="Kimi Antonelli">
+                    <p class="numero">12</p>
+                    <p class="nombre">Kimi Antonelli</p>
+                    <img src="img/banderas/italia.png" alt="Bandera de Italia" class="bandera-piloto">
+                </div>
+            </div>
+        </article>
+
+        <!-- Aston Martin -->
+        <article class="equipo-pilotos">
+            <h3>Aston Martin</h3>
+            <div class="pilotos-grid">
+                <div class="piloto">
+                    <img src="img/pilotos/fernando-alonso.png" alt="Fernando Alonso">
+                    <p class="numero">14</p>
+                    <p class="nombre">Fernando Alonso</p>
+                    <img src="img/banderas/espana.png" alt="Bandera de España" class="bandera-piloto">
+                </div>
+                <div class="piloto">
+                    <img src="img/pilotos/lance-stroll.png" alt="Lance Stroll">
+                    <p class="numero">18</p>
+                    <p class="nombre">Lance Stroll</p>
+                    <img src="img/banderas/canada.png" alt="Bandera de Canadá" class="bandera-piloto">
+                </div>
+            </div>
+        </article>
+
+        <!-- Racing Bulls -->
+        <article class="equipo-pilotos">
+            <h3>Racing Bulls</h3>
+            <div class="pilotos-grid">
+                <div class="piloto">
+                    <img src="img/pilotos/liam-lawson.png" alt="Liam Lawson">
+                    <p class="numero">30</p>
+                    <p class="nombre">Liam Lawson</p>
+                    <img src="img/banderas/australia.png" alt="Bandera de Australia" class="bandera-piloto">
+                </div>
+                <div class="piloto">
+                    <img src="img/pilotos/isack-hadjar.png" alt="Isack Hadjar">
+                    <p class="numero">6</p>
+                    <p class="nombre">Isack Hadjar</p>
+                    <img src="img/banderas/francia.png" alt="Bandera de Francia" class="bandera-piloto">
+                </div>
+            </div>
+        </article>
+
+        <!-- Haas -->
+        <article class="equipo-pilotos">
+            <h3>Haas</h3>
+            <div class="pilotos-grid">
+                <div class="piloto">
+                    <img src="img/pilotos/esteban-octon.png" alt="Esteban Octon">
+                    <p class="numero">31</p>
+                    <p class="nombre">Esteban Octon</p>
+                    <img src="img/banderas/francia.png" alt="Bandera de Francia" class="bandera-piloto">
+                </div>
+                <div class="piloto">
+                    <img src="img/pilotos/oliver-bearman.png" alt="Oliver Bearman">
+                    <p class="numero">87</p>
+                    <p class="nombre">Oliver Bearman</p>
+                    <img src="img/banderas/reino-unido.png" alt="Bandera de Reino Unido" class="bandera-piloto">
+                </div>
+            </div>
+        </article>
+
+         <!-- Alpine -->
+        <article class="equipo-pilotos">
+            <h3>Alpine</h3>
+            <div class="pilotos-grid">
+                <div class="piloto">
+                    <img src="img/pilotos/pierre-gasly.png" alt="Pierre Gasly">
+                    <p class="numero">10</p>
+                    <p class="nombre">Pierre Gasly</p>
+                    <img src="img/banderas/francia.png" alt="Bandera de Francia" class="bandera-piloto">
+                </div>
+                <div class="piloto">
+                    <img src="img/pilotos/franco-colapinto.png" alt="Franco Colapinto">
+                    <p class="numero">43</p>
+                    <p class="nombre">Franco Colapinto</p>
+                    <img src="img/banderas/argentina.png" alt="Bandera de Argentina" class="bandera-piloto">
+                </div>
+            </div>
+        </article>
+
+        <!-- Williams -->
+        <article class="equipo-pilotos">
+            <h3>Williams</h3>
+            <div class="pilotos-grid">
+                <div class="piloto">
+                    <img src="img/pilotos/alexander-albon.png" alt="Alexander Albon">
+                    <p class="numero">23</p>
+                    <p class="nombre">Alexander Albon</p>
+                    <img src="img/banderas/reino-unido.png" alt="Bandera de Reino Unido" class="bandera-piloto">
+                </div>
+                <div class="piloto">
+                    <img src="img/pilotos/carlos-sainz.png" alt="Carlos Sainz">
+                    <p class="numero">55</p>
+                    <p class="nombre">Carlos Sainz</p>
+                    <img src="img/banderas/espana.png" alt="Bandera de España" class="bandera-piloto">
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- SECCIÓN EQUIPOS F1 -->
+<section id="equipos" class="equipos-f1">
+    <h2>Equipos de Fórmula 1</h2>
+    <div class="section-underline"></div>
+
+    <div class="equipos-grid">
+
+        <!-- Ferrari -->
+        <article class="equipo-card">
+            <img src="img/equipos/ferrari-car.jpg" alt="Monoplaza Ferrari">
+            <div class="equipo-info">
+                <h3>Ferrari</h3>
+                <img src="img/logos/ferrari.png" alt="Logo Ferrari" class="logo-equipo">
+            </div>
+        </article>
+
+        <!-- Aston Martin -->
+        <article class="equipo-card">
+            <img src="img/equipos/aston-martin-car.jpg" alt="Monoplaza Aston Martin">
+            <div class="equipo-info">
+                <h3>Aston Martin</h3>
+                <img src="img/logos/aston-martin.png" alt="Logo Aston Martin" class="logo-equipo">
+            </div>
+        </article>
+
+        <!-- McLaren -->
+        <article class="equipo-card">
+            <img src="img/equipos/mclaren-car.jpg" alt="Monoplaza McLaren">
+            <div class="equipo-info">
+                <h3>McLaren</h3>
+                <img src="img/logos/mclaren.png" alt="Logo McLaren" class="logo-equipo">
+            </div>
+        </article>
+
+        <!-- Mercedes -->
+        <article class="equipo-card">
+            <img src="img/equipos/mercedes-car.jpg" alt="Monoplaza Mercedes">
+            <div class="equipo-info">
+                <h3>Mercedes</h3>
+                <img src="img/logos/mercedes.png" alt="Logo Mercedes" class="logo-equipo">
+            </div>
+        </article>
+
+    </div>
+</section>
+
+
+</main>       
+</body>
+</html>
