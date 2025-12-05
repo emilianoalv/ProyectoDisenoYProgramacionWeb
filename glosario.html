@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+
+    <!-- Fuente Sansation -->
+    <link href="https://fonts.cdnfonts.com/css/sansation" rel="stylesheet">
+
+    <!-- CSS global y del index -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/glosario.css">
+</head>
+<body>
+
+
+<!-- NavBar-->    
+
+<header class="navbar">
+        <div class="logo">
+            <img src="C:\Users\alfon\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\Diseño y progrmación web\Imagenes\Logo-F1.png" alt="LogoF1">
+        </div>
+    
+        <!-- MENÚ -->
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+
+                <!-- ACTIVIDADES CON DESPLEGABLE -->
+                <li class="dropdown">
+                    <a href="actividades.html">
+                        Actividades <span class="arrow">▾</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        <li><a href="clasificacion.html">Clasificación</a></li>
+                        <li><a href="calendario-gp.html">Calendario grandes premios</a></li>
+                        <li><a href="pilotos-buscador.html">Pilotos</a></li>
+                        <li><a href="glosario.html"class="activo">Glosario</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="tienda-principal.html">Tienda</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<main class = "glosario">
+    <!-- Titulo-->
+     <section class="glosario-header">
+        <h1> Glosario Fórmula 1</h1>
+        <span class="glosario-underline"></span>
+     </section>
+
+     <section class="glosario-lista">
+        <!-- 01 Alerón delantero-->
+        <article class="glosario-item">
+            <div class="glosario-numero">01</div>
+            <div class="glosario-contenido">
+                <h2>Alerón delantero</h2>
+                <p>
+                    Elemento aerodinámico ubicado en la parte frontal del monoplaza. 
+                    Su función principal es generar carga aerodinámica hacia el suelo, 
+                    aumentando la adherencia en las curvas.
+                </p>
+                <p>
+                    También canaliza el aire hacia los costados y el fondo del coche 
+                    para optimizar el flujo aerodinámico.
+                </p>
+                <p class="dato-relevante">
+                    <span>Dato relevante:</span> Cada equipo diseña su propio alerón según el circuito; 
+                    uno con más ángulo genera más carga, pero también más resistencia al aire.
+                </p>
+                <div class="glosario-imagen">
+                    <img src="images/glosario/aleron.png" alt="Alerón delantero de un Fórmula 1">
+                </div>
+            </div>
+        </article>
+
+        <!-- 02 Boxes-->
+        <article class="glosario-item">
+            <div class="glosario-numero">02</div>
+            <div class="glosario-contenido">
+                <h2>Boxes(pits)</h2>
+                <p>
+                    Zona donde los monoplazas se detienen para realizar cambios de neumáticos, 
+                    ajustes o reparaciones.
+                </p>
+                <p>
+                    Durante la carrera, los pit stops son planificados con precisión para 
+                    minimizar el tiempo perdido.
+                </p>
+                <p class="dato-relevante">
+                    <span>Dato relevante:</span> Un cambio de las cuatro llantas puede realizarse 
+                    en menos de 2.5 segundos. El récord lo tiene Red Bull con 1.82 segundos.
+                </p>
+                <div class="glosario-imagen">
+                    <img src="images/glosario/boxes.png" alt="Pit stop en Fórmula 1">
+                </div>
+            </div>
+        </article>
+
+         <!-- 03 Chasis -->
+        <article class="glosario-item">
+            <div class="glosario-numero">03</div>
+            <div class="glosario-contenido">
+                <h2>Chasis</h2>
+                <p>
+                    Estructura principal del coche que sostiene todos los componentes 
+                    mecánicos, eléctricos y aerodinámicos.
+                </p>
+                <p>
+                    Fabricado con fibra de carbono por su resistencia y ligereza, el chasis 
+                    debe superar pruebas de choque muy estrictas antes de cada temporada.
+                </p>
+                <p class="dato-relevante">
+                    <span>Dato relevante:</span> Pesa entre 35 y 45 kg y es uno de los elementos 
+                    más costosos del coche.
+                </p>
+                <div class="glosario-imagen">
+                    <img src="images/glosario/chasis.png" alt="Chasis de un Fórmula 1">
+                </div>
+            </div>
+        </article>
+
+         <!-- 04 DRS -->
+        <article class="glosario-item">
+            <div class="glosario-numero">04</div>
+            <div class="glosario-contenido">
+                <h2>DRS (Drag Reduction System)</h2>
+                <p>
+                    Sistema que permite reducir la resistencia aerodinámica abriendo una 
+                    compuerta en el alerón trasero. Esto aumenta la velocidad en rectas 
+                    y facilita adelantamientos.
+                </p>
+                <p><strong>Condiciones:</strong></p>
+                <p>Solo se puede usar en zonas DRS designadas.</p>
+                <p>El piloto debe estar a menos de 1 segundo del coche de adelante.</p>
+                <p class="dato-relevante">
+                    <span>Dato relevante:</span> Puede aumentar la velocidad máxima entre 10 y 
+                    20 km/h dependiendo del circuito.
+                </p>
+                <div class="glosario-imagen">
+                    <img src="images/glosario/drs.png" alt="Coche con DRS activado">
+                </div>
+            </div>
+        </article>
+
+         <!-- 05 Halo -->
+        <article class="glosario-item">
+            <div class="glosario-numero">05</div>
+            <div class="glosario-contenido">
+                <h2>Halo</h2>
+                <p>
+                    Dispositivo de protección de titanio colocado sobre la cabina del piloto. 
+                    Protege contra impactos de objetos o choques.
+                </p>
+                <p class="dato-relevante">
+                    <span>Dato relevante:</span> Introducido en 2018, fue inicialmente criticado 
+                    por estética, pero ha salvado vidas (por ejemplo, en los accidentes de 
+                    Grosjean 2020 y Zhou 2022).
+                </p>
+                <div class="glosario-imagen">
+                    <img src="images/glosario/halo.png" alt="Halo de protección en Fórmula 1">
+                </div>
+            </div>
+        </article>
+
+        <!-- 06 Alerón trasero -->
+<article class="glosario-item">
+    <div class="glosario-numero">06</div>
+    <div class="glosario-contenido">
+        <h2>Alerón trasero</h2>
+        <p>
+            Elemento aerodinámico situado en la parte posterior del monoplaza. 
+            Su función principal es generar carga aerodinámica y dar estabilidad 
+            al coche en curvas rápidas y frenadas fuertes.
+        </p>
+        <p>
+            Trabaja en conjunto con el alerón delantero y el difusor para equilibrar 
+            el coche y evitar que la parte trasera pierda agarre.
+        </p>
+        <p class="dato-relevante">
+            <span>Dato relevante:</span> Cuando se activa el DRS, es el alerón trasero 
+            el que abre una compuerta para reducir la resistencia al aire.
+        </p>
+        <div class="glosario-imagen">
+            <img src="images/glosario/aleron-trasero.jpg" alt="Alerón trasero de un Fórmula 1">
+        </div>
+    </div>
+</article>
+
+<!-- 07 Difusor trasero -->
+<article class="glosario-item">
+    <div class="glosario-numero">07</div>
+    <div class="glosario-contenido">
+        <h2>Difusor trasero</h2>
+        <p>
+            Parte del fondo del coche por donde sale el aire que pasa por debajo 
+            del monoplaza. Su diseño permite acelerar el flujo de aire y crear 
+            una zona de baja presión.
+        </p>
+        <p>
+            Esto genera efecto suelo, “pegando” el coche al asfalto sin aumentar 
+            demasiado la resistencia aerodinámica.
+        </p>
+        <p class="dato-relevante">
+            <span>Dato relevante:</span> Aunque casi no se ve desde fuera, un difusor 
+            eficiente puede aportar una gran parte de la carga aerodinámica total del coche.
+        </p>
+        <div class="glosario-imagen">
+            <img src="images/glosario/difusor-trasero.png" alt="Difusor trasero de un Fórmula 1">
+        </div>
+    </div>
+</article>
+
+<!-- 08 Neumáticos slick -->
+<article class="glosario-item">
+    <div class="glosario-numero">08</div>
+    <div class="glosario-contenido">
+        <h2>Neumáticos slick</h2>
+        <p>
+            Neumáticos lisos, sin dibujo, utilizados en condiciones de pista seca. 
+            Ofrecen el máximo agarre cuando alcanzan la temperatura correcta de trabajo.
+        </p>
+        <p>
+            Existen varios compuestos (más duros o más blandos) que se diferencian por color 
+            y afectan al desgaste y a la estrategia de carrera.
+        </p>
+        <p class="dato-relevante">
+            <span>Dato relevante:</span> Un compuesto más blando es más rápido, 
+            pero se degrada antes; los equipos deben elegir el equilibrio ideal 
+            para cada circuito.
+        </p>
+        <div class="glosario-imagen">
+            <img src="images/glosario/neumaticos.png" alt="Neumáticos slick de Fórmula 1">
+        </div>
+    </div>
+</article>
+
+<!-- 09 Safety Car -->
+<article class="glosario-item">
+    <div class="glosario-numero">09</div>
+    <div class="glosario-contenido">
+        <h2>Safety Car</h2>
+        <p>
+            Coche de seguridad que entra en pista cuando hay un accidente o condiciones 
+            peligrosas. Su función es agrupar a los monoplazas y reducir la velocidad 
+            mientras se limpia la pista.
+        </p>
+        <p>
+            Durante este periodo, los pilotos deben mantenerse detrás del Safety Car 
+            sin adelantar y respetando un ritmo controlado.
+        </p>
+        <p class="dato-relevante">
+            <span>Dato relevante:</span> Parar en boxes bajo Safety Car suele ser más 
+            barato en tiempo, por lo que puede cambiar por completo la estrategia de carrera.
+        </p>
+        <div class="glosario-imagen">
+            <img src="images/glosario/safety-car.png" alt="Safety Car en un gran premio de Fórmula 1">
+        </div>
+    </div>
+</article>
+
+<!-- 10 Undercut y Overcut -->
+<article class="glosario-item">
+    <div class="glosario-numero">10</div>
+    <div class="glosario-contenido">
+        <h2>Undercut y Overcut</h2>
+        <p>
+            El <strong>undercut</strong> consiste en parar antes en boxes para montar neumáticos 
+            nuevos y usar esa ventaja de ritmo para adelantar a un rival cuando este pare después.
+        </p>
+        <p>
+            El <strong>overcut</strong> es la estrategia contraria: permanecer más tiempo en pista 
+            con neumáticos usados, intentando rodar en aire limpio y ganar tiempo antes de parar.
+        </p>
+        <p class="dato-relevante">
+            <span>Dato relevante:</span> En circuitos donde adelantar es difícil, 
+            un undercut bien planificado puede ser la forma más efectiva de ganar posiciones.
+        </p>
+        <div class="glosario-imagen">
+            <img src="images/glosario/undercut-overcut.png" alt="Parada en boxes para undercut en Fórmula 1">
+        </div>
+    </div>
+</article>
+
+
+     </section>
+
+</main>
+
+

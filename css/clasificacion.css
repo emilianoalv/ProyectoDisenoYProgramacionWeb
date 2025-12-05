@@ -1,0 +1,105 @@
+/* ==========================
+   SECCIÓN CLASIFICACIÓN
+===========================*/
+.encabezado-clasificacion {
+    /*margin-top: 40px;*/
+    margin-bottom: 24px;
+}
+
+.encabezado-clasificacion h1{
+    font-size: 2.0rem;
+    font-weight: 700;
+}
+
+.clasificacion-pilotos,
+.clasificacion-equipos {
+    margin-bottom: 48px;
+}
+
+.clasificacion-pilotos > h2,
+.clasificacion-equipos > h2 {
+    font-size: 1.6rem;
+    margin-bottom: 14px;
+}
+
+
+/* ==========================
+   TABLAS
+===========================*/
+
+.tabla-scroll {
+    width: 100%;
+    overflow-x: auto;  
+    overflow-y: hidden;
+}
+
+.tabla-scroll table {
+    min-width: 1300px;
+}
+
+.tabla-clasificacion{
+    min-width: 900px;
+    border-collapse: collapse;
+    margin-top: 8px;
+    margin-bottom: 28px;
+    font-size: 1rem;
+    border-radius: 14px;
+    overflow:hidden;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+}
+
+.tabla-clasificacion thead{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.tabla-clasificacion th,
+.tabla-clasificacion td {
+    white-space: nowrap;
+    padding: 14px 18px;
+}
+
+.tabla-clasificacion th{
+    text-align: left;
+    font-weight: 700;
+}
+
+.tabla-clasificacion th:nth-child(n+3),
+.tabla-clasificacion td:nth-child(n+3) {
+    text-align: center;
+}
+
+.tabla-clasificacion tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+.tabla-clasificacion tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.tabla-clasificacion tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+
+/* ==========================
+   Banderas
+===========================*/
+
+.tabla-clasificacion thead img {
+    display: block;
+    margin: 4px auto 0;
+    height: 22px;
+    width: auto;
+    border-radius: 8px;   /* efecto “pastilla” como en Figma */
+}
+
+.tabla-clasificacion th small,
+.tabla-clasificacion th span{
+    display: block;
+}
+
+.tabla-clasificacion th:nth-child(2),
+.tabla-clasificacion td:nth-child(2){
+    width: 28%
+}

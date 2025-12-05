@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+
+    <!-- Fuente Sansation -->
+    <link href="https://fonts.cdnfonts.com/css/sansation" rel="stylesheet">
+
+    <!-- CSS global y del index -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/pilotos.css">
+</head>
+<body>
+
+
+<!-- NavBar-->    
+
+<header class="navbar">
+        <div class="logo">
+            <img src="C:\Users\alfon\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\Diseño y progrmación web\Imagenes\Logo-F1.png" alt="LogoF1">
+        </div>
+    
+        <!-- MENÚ -->
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+
+                <!-- ACTIVIDADES CON DESPLEGABLE -->
+                <li class="dropdown">
+                    <a href="actividades.html">
+                        Actividades <span class="arrow">▾</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        <li><a href="clasificacion.html">Clasificación</a></li>
+                        <li><a href="calendario-gp.html">Calendario grandes premios</a></li>
+                        <li><a href="pilotos-buscador.html" class="activo">Pilotos</a></li>
+                        <li><a href="glosario.html">Glosario</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="tienda-principal.html">Tienda</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+    <section id="buscador-pilotos" class="buscador-pilotos">
+        <div class="buscador-pilotos-encabezado">
+            <h2>Pilotos de Fórmula 1</h2>
+            <div class="section-underline"></div>
+            <p class="buscador-pilotos-texto">
+                Busca pilotos por nombre, equipo o número.
+            </p>
+        </div>
+
+        <div class="buscador-pilotos-barra">
+            <input
+                type="text"
+                id="busqueda"
+                placeholder="Escribe nombre, equipo o número..."
+            />
+            <button id="botonBuscar">Buscar</button>
+        </div>
+
+        <p id="estado" class="buscador-pilotos-estado">Cargando pilotos...</p>
+
+        <div id="resultados" class="pilotos-grid-dinamica">
+            <!-- Para insertar los pilotos con JS -->
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</main>

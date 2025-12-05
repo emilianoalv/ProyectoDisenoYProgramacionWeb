@@ -8,8 +8,10 @@
     <!-- Fuente Sansation -->
     <link href="https://fonts.cdnfonts.com/css/sansation" rel="stylesheet">
 
-    <!-- Hoja de estilos general -->
-    <link rel="stylesheet" href="style.css">
+    <!-- CSS global y de noticias -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/noticias.css">
+
 </head>
 <body>
 
@@ -31,9 +33,11 @@
                         Actividades <span class="arrow">▾</span>
                     </a>
                     <ul class="dropdown-menu">
-                        <!-- Ajusta los href a los nombres reales de tus archivos -->
+                        
                         <li><a href="clasificacion.html">Clasificación</a></li>
                         <li><a href="calendario-gp.html">Calendario grandes premios</a></li>
+                        <li><a href="pilotos-buscador.html">Pilotos</a></li>
+                        <li><a href="glosario.html">Glosario</a></li>
                     </ul>
                 </li>
 
@@ -50,7 +54,7 @@
 
         <!-- TÍTULO PRINCIPAL DE LA PÁGINA -->
         <section class="encabezado-noticias">
-            <h1>Noticias de Fórmula 1</h1>
+            <h2>Noticias de Fórmula 1</h2>
             <div class="section-underline"></div>
         </section>
 
@@ -62,9 +66,13 @@
                 <!-- Noticia principal grande -->
                 <article class="noticia-principal">
                     <figure>
-                        <img src="C:\Users\alfon\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\Diseño y progrmación web\Proyecto - Página web Formula1\Noticias\Principal.jpg" alt="Auto de Fórmula 1 en pista">
+                        <img src="images/noticias/principal-izquierda.jpg">
                         <a href="ejemplo-noticia.html">
                         <h3>Escándalo en los pits: la estrategia que dejó sin podio al favorito</h3>
+                        <p class="noticia-principal-descripcion">
+                            Una parada mal calculada arruinó los planes del piloto que lideraba gran parte de la carrera. 
+                            La decisión del equipo ha levantado polémica y críticas dentro y fuera del paddock.
+                        </p>
                         </a>
                     </figure>
                 </article>
@@ -74,28 +82,28 @@
 
                     <article class="noticia-card">
                         <figure>
-                            <img src="img/noticias/secundaria1.jpg" alt="Exhibición de Fórmula 1 en Madrid">
+                            <img src="images/noticias/secundaria-derecha-arriba.jpg" alt="Exhibición de Fórmula 1 en Madrid">
                         </figure>
                         <h3>El rugido de la historia: inauguran una exhibición única de Fórmula 1 en Madrid</h3>
                     </article>
 
                     <article class="noticia-card">
                         <figure>
-                            <img src="img/noticias/secundaria2.jpg" alt="Safety Car cambia la carrera">
+                            <img src="images/noticias/secuandario-derecha-arriba2.jpg" alt="Safety Car cambia la carrera">
                         </figure>
                         <h3>¡Increíble! Un Safety Car cambió todo: la carrera más caótica de la temporada de F1</h3>
                     </article>
 
                     <article class="noticia-card">
                         <figure>
-                            <img src="img/noticias/secundaria3.jpg" alt="Auto más rápido de la F1">
+                            <img src="images/noticias/secundaria-derecha-abajo.jpg" alt="Auto más rápido de la F1">
                         </figure>
                         <h3>Récord histórico: el auto más rápido de la Fórmula 1 sorprende al mundo</h3>
                     </article>
 
                     <article class="noticia-card">
                         <figure>
-                            <img src="img/noticias/secundaria4.jpg" alt="Choque múltiple en la primera curva">
+                            <img src="images/noticias/secundaria-derecha-abajo2.jpg" alt="Choque múltiple en la primera curva">
                         </figure>
                         <h3>Choque múltiple en la primera curva: la parrilla queda patas arriba</h3>
                     </article>
@@ -103,15 +111,6 @@
                 </div>
             </div>
 
-            <!-- Texto de la noticia principal -->
-            <article class="noticia-texto-principal">
-                <h2>Escándalo en los pits: la estrategia que dejó sin podio al favorito</h2>
-                <p>
-                    Una parada mal calculada arruinó los planes del piloto que lideraba gran parte de la carrera.
-                    La decisión del equipo ha levantado polémica y críticas dentro y fuera del paddock.
-                </p>
-            </article>
-        </section>
 
         <!-- SECCIÓN MÁS NOTICIAS -->
         <section class="mas-noticias">
@@ -123,10 +122,10 @@
                 <!-- Noticia 1 -->
                 <article class="mas-noticia-card">
                     <figure class="mas-noticia-imagen">
-                        <img src="img/noticias/mas1.jpg" alt="Podio Norris, Verstappen y Piastri">
+                        <img src="images/noticias/Noticia1.jpg" alt="Podio Norris, Verstappen y Piastri">
                     </figure>
                     <div class="mas-noticia-contenido">
-                        <h3>Norris, gran pole que pone contra las cuerdas a Verstappen y Piastri; Sainz bestial con el 7º tiempo</h3>
+                        <h3>Norris, gran pole que pone contra las cuerdas a Verstappen y Piastri; Sainz bestial con el séptimo tiempo</h3>
                         <p>
                             Lando da un paso de gigante para colocarse líder del Mundial, Max.
                         </p>
@@ -136,7 +135,7 @@
                  <!-- Noticia 2 -->
                 <article class="mas-noticia-card">
                     <figure class="mas-noticia-imagen">
-                        <img src="img/noticias/mas2.jpg" alt="Auto en el GP de México">
+                        <img src="images/noticias/Noticia2.jpg" alt="Auto en el GP de México">
                     </figure>
                     <div class="mas-noticia-contenido">
                         <h3>A qué hora es la carrera de F1 del GP de México: horario, parrilla y dónde ver en TV a Alonso y Sainz</h3>
@@ -149,7 +148,7 @@
                 <!-- Noticia 3 -->
                 <article class="mas-noticia-card">
                     <figure class="mas-noticia-imagen">
-                        <img src="img/noticias/mas3.jpg" alt="Hamilton y piloto en el pit lane">
+                        <img src="images/noticias/Noticia3.jpg" alt="Hamilton y piloto en el pit lane">
                     </figure>
                     <div class="mas-noticia-contenido">
                         <h3>Hamilton lanza un aviso para la carrera: "Seré agresivo, no tengo nada que perder"</h3>
@@ -163,7 +162,7 @@
                 <!-- Noticia 4 -->
                 <article class="mas-noticia-card">
                     <figure class="mas-noticia-imagen">
-                        <img src="img/noticias/mas4.jpg" alt="Pilotos conversando tras la clasificación">
+                        <img src="images/noticias/Noticia4.jpg" alt="Pilotos conversando tras la clasificación">
                     </figure>
                     <div class="mas-noticia-contenido">
                         <h3>Clasificación, parrilla y pole del Gran Premio de México de Fórmula 1</h3>

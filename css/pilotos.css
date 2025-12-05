@@ -1,0 +1,109 @@
+/* CONTENEDOR DE LA SECCIÓN */
+
+.buscador-pilotos {
+    width: min(1200px, 100% - 3rem);
+    margin: 4rem auto 5rem;
+}
+
+.buscador-pilotos-encabezado {
+    text-align: left;
+}
+
+.buscador-pilotos-encabezado h2 {
+    font-size: 2.4rem;
+}
+
+.buscador-pilotos-texto {
+    margin-top: 0.8rem;
+    font-size: 1rem;
+    color: #444;
+}
+
+/* BARRA DE BÚSQUEDA */
+
+.buscador-pilotos-barra {
+    margin: 2rem 0 1rem;
+    display: flex;
+    gap: 0.75rem;
+    max-width: 600px;
+}
+
+.buscador-pilotos-barra input,
+.buscador input {             
+    flex: 1;
+    padding: 0.6rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+.buscador-pilotos-barra button,
+.buscador button {
+    padding: 0.6rem 1.8rem;
+    border-radius: 999px;
+    border: 1px solid #ff1a1a;
+    background: #ff1a1a;
+    color: #fff;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+.buscador-pilotos-barra button:hover,
+.buscador button:hover {
+    background: #d90000;
+    border-color: #d90000;
+}
+
+/* TEXTO DE ESTADO */
+
+#estado {
+    text-align: left;
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0.5rem 0 1.5rem;
+}
+
+/* GRID DE RESULTADOS */
+
+#resultados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.6rem;
+}
+
+/* TARJETA DE PILOTO (usa la clase .piloto que pone el JS) */
+
+.piloto {
+    background: #ffffff;
+    border-radius: 22px;
+    border: 1px solid #e0e0e0;
+    padding: 1rem 1.2rem 1.3rem;
+    font-size: 0.95rem;
+    color: #111;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.piloto h3 {
+    margin: 0 0 0.4rem 0;
+    font-size: 1.1rem;
+}
+
+.piloto .numero {
+    font-weight: 700;
+    margin-right: 6px;
+    font-size: 1rem;
+}
+
+.piloto .equipo {
+    font-weight: 600;
+    color: #444;
+    margin: 0.1rem 0;
+}
+
+.piloto .extra {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 0.4rem;
+}

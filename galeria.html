@@ -9,7 +9,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
-    <link rel="stylesheet" href = "style.css">
+
+    <!-- CSS global y de galería -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/galeria.css">
+
 </head>
 <body>
 
@@ -32,9 +36,11 @@
                         Actividades <span class="arrow">▾</span>
                     </a>
                     <ul class="dropdown-menu">
-                        <!-- Ajusta los href a los nombres reales de tus archivos -->
+                        
                         <li><a href="clasificacion.html">Clasificación</a></li>
                         <li><a href="calendario-gp.html">Calendario grandes premios</a></li>
+                        <li><a href="pilotos-buscador.html">Pilotos</a></li>
+                        <li><a href="glosario.html">Glosario</a></li>
                     </ul>
                 </li>
 
@@ -48,82 +54,111 @@
 </header>
 
 <main>
-    <!-- Sección de la galeria -->
-
-<section id="galeria" class="galeria">
-    <h2>Galería</h2>
-    <div class="section-underline"></div>
-
-    <div class="galeria-grid">
-
-        <!-- Ferrari-->
-        <article class="ferrari">
-            <img src="img/galeria/ferrari.jpg" alt="Galeria Ferrari">
-            <div class="info-ferrari">
-                <h3>Ferrari</h3>
+    <section class="galeria-gp">
+        <!-- Cabecera -->
+        <div class="galeria-header">
+            <div class="galeria-texto">
+                <p>Galería</p>
+                <h2>Mejores fotos de la temporada</h2>
+                <div class="section-underline"></div>
             </div>
-        </article>
+        </div>
 
-        <!-- Mercedes -->
-        <article class="mercedes">
-            <img src="img/galeria/mercedes.jpg" alt="Galeria Mercedes">
-            <div class="info-mercedes">
-                <h3>Mercedes</h3>
-            </div>
-        </article>
+        <!-- GRID DE FOTOS (24 IMÁGENES) -->
+        <div class="galeria-grid">
 
-                <!-- Red Bull -->
-        <article class="redbull">
-            <img src="img/galeria/redbull.jpg" alt="Galeria Red Bull">
-            <div class="info-redbull">
-                <h3>Red Bull</h3>
-            </div>
-        </article>
+            <!-- Fila 1 -->
+            <article class="galeria-item">
+                <img src="images/galeria/1.jpg" alt="GP 1">
+            </article>
+            <article class="galeria-item">
+                <img src="images/galeria/2.jpg" alt="GP 2">
+            </article>
+            <article class="galeria-item">
+                <img src="images/galeria/3.jpg" alt="GP 3">
+            </article>
 
-        <!-- Honda -->
-        <article class="honda">
-            <img src="img/galeria/honda.jpg" alt="Galeria Honda">
-            <div class="info-honda">
-                <h3>Honda</h3>
-            </div>
-        </article>
+            <!-- Fila 2 -->
+            <article class="galeria-item galeria-mas--ancho">
+                <img src="images/galeria/4.jpg" alt="GP 4">
+            </article>
+            <article class="galeria-item">
+                <img src="images/galeria/5.jpg" alt="GP 5">
+            </article>
 
-        <!-- McLaren -->
-        <article class="mclaren">
-            <img src="img/galeria/mclaren.jpg" alt="Galeria McLaren">
-            <div class="info-mclaren">
-                <h3>McLaren</h3>
-            </div>
-        </article>
+            <!-- Fila 3 -->
+            <article class="galeria-item">
+                <img src="images/galeria/6.jpg" alt="GP 6">
+            </article>
+            <article class="galeria-item galeria-mas--ancho">
+                <img src="images/galeria/7.jpg" alt="GP 7">
+            </article>
 
-        <!-- Alpine -->
-        <article class="alpine">
-            <img src="img/galeria/alpine.jpg" alt="Galeria Alpine">
-            <div class="info-alpine">
-                <h3>Alpine</h3>
-            </div>
-        </article>
+            <!-- Fila 4 -->
+            <article class="galeria-item">
+                <img src="images/galeria/8.jpg" alt="GP 8">
+            </article>
+            <article class="galeria-item">
+                <img src="images/galeria/9.jpg" alt="GP 9">
+            </article>
+            <article class="galeria-item">
+                <img src="images/galeria/10.jpg" alt="GP 10">
+            </article>
 
-        <!-- Aston Martin -->
-        <article class="astonmartin">
-            <img src="img/galeria/astonmartin.jpg" alt="Galeria Aston Martin">
-            <div class="info-astonmartin">
-                <h3>Aston Martin</h3>
-            </div>
-        </article>
+            <!-- Fila 5 -->
+            <article class="galeria-item galeria-mas--ancho">
+                <img src="images/galeria/11.jpg" alt="GP 11">
+            </article>
+            <article class="galeria-item">
+                <img src="images/galeria/12.jpg" alt="GP 12">
+            </article>
 
-        <!-- Williams -->
-        <article class="williams">
-            <img src="img/galeria/williams.jpg" alt="Galeria Williams">
-            <div class="info-williams">
-                <h3>Williams</h3>
-            </div>
-        </article>
+            <!-- Fila 6 -->
+            <article class="galeria-item">
+                <img src="images/galeria/13.jpg" alt="GP 13">
+            </article>
+            <article class="galeria-item galeria-mas--ancho">
+                <img src="images/galeria/14.jpg" alt="GP 14">
+            </article>
 
+            <!-- Fila 7 -->
+            <article class="galeria-item">
+                <img src="images/galeria/15.jpg" alt="GP 15">
+            </article>
+            <article class="galeria-item">
+                <img src="images/galeria/16.jpg" alt="GP 16">
+            </article>
+            <article class="galeria-item">
+                <img src="images/galeria/17.jpg" alt="GP 17">
+            </article>
 
+            <!-- Fila 8 -->
+            <article class="galeria-item galeria-mas--ancho">
+                <img src="images/galeria/18.jpg" alt="GP 18">
+            </article>
+            <article class="galeria-item">
+                <img src="images/galeria/19.jpg" alt="GP 19">
+            </article>
 
+            <!-- Fila 9 -->
+            <article class="galeria-item">
+                <img src="images/galeria/20.jpg" alt="GP 20">
+            </article>
+            <article class="galeria-item galeria-mas--ancho">
+                <img src="images/galeria/21.jpg" alt="GP 21">
+            </article>
 
-</section>
-</body>
-</html>
+            <!-- Fila 10 -->
+            <article class="galeria-item">
+                <img src="images/galeria/22.jpg" alt="GP 22">
+            </article>
+            <article class="galeria-item">
+                <img src="images/galeria/23.jpg" alt="GP 23">
+            </article>
+            <article class="galeria-item">
+                <img src="images/galeria/24.jpg" alt="GP 24">
+            </article>
+
+        </div>
+    </section>
 </main>

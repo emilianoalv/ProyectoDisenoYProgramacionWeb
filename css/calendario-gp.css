@@ -1,0 +1,58 @@
+/* ==========================
+   SECCIÓN PRÓXIMAS CARRERAS
+===========================*/
+
+.carreras-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* Card de carrera */
+.carrera {
+    background-color: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    margin: 3px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.carrera:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(0,0,0,0.18);
+}
+
+/* Foto circuito */
+.carrera > img {
+    width: 100%;
+    display: block;
+    border-radius: 24px 24px 0 0;
+}
+
+/* Parte inferior: info + bandera */
+.carrera .info-carrera {
+    padding: 15px 15px 18px;
+}
+
+.carrera .info-carrera h3 {
+    font-size: 1.5rem;
+    margin-bottom: 4px;
+}
+
+.carrera .info-carrera p {
+    font-size: 1.2rem;
+}
+
+.carrera .bandera-carrera {
+    margin-left: auto;
+    padding: 0 20px 20px;
+}
+
+.carrera .bandera-carrera img {
+    height: 44px;
+    width: auto;
+    display: block;
+}

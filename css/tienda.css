@@ -1,0 +1,134 @@
+/* ==========================
+   SECCIÓN TIENDA
+===========================*/
+
+.tienda {
+    max-width: 1100px;          
+    /*margin: 80px auto 60px;*/ 
+    padding: 0 32px;
+    background-color: #ffffff;
+}
+
+/* ------- Título + carrito ------- */
+
+.tienda-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.tienda-titulo h1 {
+    font-family: 'Sansation', sans-serif;
+    font-size: 33px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.section-underline {
+    width: 80px;
+    height: 4px;
+    margin-top: 8px;
+    border-radius: 999px;
+    background-color: #e10600;   /* rojo F1 */
+}
+
+/* Botón carrito */
+
+.carrito-btn {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 8px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.carrito-btn img {
+    width: 34px;
+    height: 34px;
+    display: block;
+}
+
+.carrito-btn:hover {
+    background-color: rgba(0, 0, 0, 0.06);
+    transform: translateY(-1px);
+}
+
+.carrito-badge {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #e10600;
+    border: 2px solid #ffffff;
+}
+
+/* ------- GRID DE PRODUCTOS ------- */
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 60px;
+    row-gap: 50px;
+}
+
+/* Tarjeta */
+.producto {
+    text-align: center;
+    font-family: 'Sansation', sans-serif;
+}
+
+/* Imagen del producto */
+.producto img {
+    max-width: 300px;       /* tamaño parecido al prototipo */
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.producto img:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 18px 36px rgb(255, 255, 255);
+} 
+
+
+
+/* Nombre del producto */
+.producto h3 {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 4px 0 6px;
+}
+
+/* Precio */
+.producto .precio {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+
+
+/* ------- RESPONSIVE ------- */
+
+@media (max-width: 900px) {
+    .productos-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .tienda {
+        padding: 0 16px;
+    }
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+}
