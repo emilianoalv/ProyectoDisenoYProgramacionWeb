@@ -24,7 +24,7 @@
 
 
 /* ==========================
-   TABLAS
+   Tablas
 ===========================*/
 
 .tabla-scroll {
@@ -91,7 +91,7 @@
     margin: 4px auto 0;
     height: 22px;
     width: auto;
-    border-radius: 8px;   /* efecto “pastilla” como en Figma */
+    border-radius: 8px;   
 }
 
 .tabla-clasificacion th small,

@@ -1,5 +1,3 @@
-/* CONTENEDOR DE LA SECCIÓN */
-
 .buscador-pilotos {
     width: min(1200px, 100% - 3rem);
     margin: 4rem auto 5rem;
@@ -19,7 +17,7 @@
     color: #444;
 }
 
-/* BARRA DE BÚSQUEDA */
+/* Barra de busqueda */
 
 .buscador-pilotos-barra {
     margin: 2rem 0 1rem;
@@ -56,7 +54,7 @@
     border-color: #d90000;
 }
 
-/* TEXTO DE ESTADO */
+/* Estado */
 
 #estado {
     text-align: left;
@@ -65,7 +63,7 @@
     margin: 0.5rem 0 1.5rem;
 }
 
-/* GRID DE RESULTADOS */
+/* Resultados */
 
 #resultados {
     display: grid;
@@ -73,7 +71,7 @@
     gap: 1.6rem;
 }
 
-/* TARJETA DE PILOTO (usa la clase .piloto que pone el JS) */
+/* Tarjetas para los pilotos */
 
 .piloto {
     background: #ffffff;

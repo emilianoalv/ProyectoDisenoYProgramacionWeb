@@ -9,7 +9,7 @@
     background-color: #ffffff;
 }
 
-/* ------- Título + carrito ------- */
+/* ------- Título y carrito ------- */
 
 .tienda-header {
     display: flex;
@@ -67,7 +67,7 @@
     border: 2px solid #ffffff;
 }
 
-/* ------- GRID DE PRODUCTOS ------- */
+/* ------- PRODUCTOS ------- */
 
 .productos-grid {
     display: grid;
@@ -84,7 +84,7 @@
 
 /* Imagen del producto */
 .producto img {
-    max-width: 300px;       /* tamaño parecido al prototipo */
+    max-width: 300px;     
     width: 100%;
     height: auto;
     display: block;
