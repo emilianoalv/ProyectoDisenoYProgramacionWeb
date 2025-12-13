@@ -105,3 +105,30 @@
     color: #666;
     margin-top: 0.4rem;
 }
+
+
+/* ==========================
+   Responsive
+===========================*/
+
+@media (max-width: 768px){
+    .buscador-pilotos{
+        width: 100%;
+        margin: 3rem auto 4rem;
+        padding: 0 1.25rem;
+    }
+
+    .buscador-pilotos-encabezado h2{
+        font-size:2rem;
+    }
+
+    .buscador-pilotos-texto{
+        font-size: 0.95rem;
+        max-width: 28rem;
+        margin:0.8rem auto 0;
+    }
+
+    #resultados {
+        gap: 1.1rem;
+    }
+}

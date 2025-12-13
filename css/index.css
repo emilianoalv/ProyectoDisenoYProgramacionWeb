@@ -316,7 +316,7 @@
     background-color: transparent;
     display: flex;
     flex-direction: column;
-    cursor: pointer;
+    /*cursor: pointer;*/
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -355,9 +355,10 @@
 }
 
 /* ==========================
-   Resonssivo
+   Responsive
 ===========================*/
-@media (max-width: 960px) {
+
+@media (max-width: 768px) {
     .secundarias {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }

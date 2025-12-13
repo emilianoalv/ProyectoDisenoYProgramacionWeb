@@ -21,7 +21,7 @@
 
 <header class="navbar">
         <div class="logo">
-            <img src="C:\Users\alfon\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\Diseño y progrmación web\Imagenes\Logo-F1.png" alt="LogoF1">
+            <img src="images/logo/Logo-F1.png" alt="LogoF1">
         </div>
     
         <!-- MENÚ -->
@@ -55,6 +55,7 @@
 
 <main>
     <section class="galeria-gp">
+
         <!-- Cabecera -->
         <div class="galeria-header">
             <div class="galeria-texto">
@@ -64,101 +65,352 @@
             </div>
         </div>
 
-        <!-- GRID DE FOTOS (24 IMÁGENES) -->
+    
+    <!-- Se agregan filtros en forma de botones para poder ver la galería completa o por cada escudería de la F1 -->
+
+    <div class = "galeria-filtros">
+        <button class="filtro-boton activo" data-filter = "all"> Todos </button>
+        <button class="filtro-boton" data-filter = "alpine"> Alpine </button>
+        <button class="filtro-boton" data-filter = "aston-martin"> Aston Martin </button>
+        <button class="filtro-boton" data-filter = "ferrari"> Ferrari </button>
+        <button class="filtro-boton" data-filter = "haas">Haas</button>
+        <button class="filtro-boton" data-filter="kick-sauber">Kick Sauber</button>
+        <button class="filtro-boton" data-filter="mclaren">McLaren</button>
+        <button class="filtro-boton" data-filter="mercedes">Mercedes</button>
+        <button class="filtro-boton" data-filter="red-bull">Red Bull</button>
+        <button class="filtro-boton" data-filter="williams">Williams</button>
+    </div>    
+
         <div class="galeria-grid">
 
-            <!-- Fila 1 -->
-            <article class="galeria-item">
-                <img src="images/galeria/1.jpg" alt="GP 1">
+            <!-- VUELTA 1 (01) -->
+            <article class="galeria-item alpine">
+                <img src="images/galeria/Alpine/alpine-01.jpg" alt="Alpine 01">
             </article>
-            <article class="galeria-item">
-                <img src="images/galeria/2.jpg" alt="GP 2">
+            <article class="galeria-item aston-martin">
+                <img src="images/galeria/Aston-martin/aston-martin-01.jpg" alt="Aston Martin 01">
             </article>
-            <article class="galeria-item">
-                <img src="images/galeria/3.jpg" alt="GP 3">
+            <article class="galeria-item ferrari">
+                <img src="images/galeria/Ferrari/ferrari-01.jpg" alt="Ferrari 01">
             </article>
-
-            <!-- Fila 2 -->
-            <article class="galeria-item galeria-mas--ancho">
-                <img src="images/galeria/4.jpg" alt="GP 4">
+            <article class="galeria-item haas">
+                <img src="images/galeria/Haas/haas-01.jpg" alt="Haas 01">
             </article>
-            <article class="galeria-item">
-                <img src="images/galeria/5.jpg" alt="GP 5">
+            <article class="galeria-item kick-sauber">
+                <img src="images/galeria/Kick-sauber/kick-01.jpg" alt="Kick Sauber 01">
             </article>
-
-            <!-- Fila 3 -->
-            <article class="galeria-item">
-                <img src="images/galeria/6.jpg" alt="GP 6">
+            <article class="galeria-item mclaren">
+                <img src="images/galeria/McLaren/mclaren-01.jpg" alt="McLaren 01">
             </article>
-            <article class="galeria-item galeria-mas--ancho">
-                <img src="images/galeria/7.jpg" alt="GP 7">
+            <article class="galeria-item mercedes">
+                <img src="images/galeria/Mercedes/mercedes-01.jpg" alt="Mercedes 01">
             </article>
-
-            <!-- Fila 4 -->
-            <article class="galeria-item">
-                <img src="images/galeria/8.jpg" alt="GP 8">
+            <article class="galeria-item red-bull">
+                <img src="images/galeria/Red-bull/rebull-01.jpg" alt="Red Bull 01">
             </article>
-            <article class="galeria-item">
-                <img src="images/galeria/9.jpg" alt="GP 9">
-            </article>
-            <article class="galeria-item">
-                <img src="images/galeria/10.jpg" alt="GP 10">
+            <article class="galeria-item williams">
+                <img src="images/galeria/Williams/williams-01.jpg" alt="Williams 01">
             </article>
 
-            <!-- Fila 5 -->
-            <article class="galeria-item galeria-mas--ancho">
-                <img src="images/galeria/11.jpg" alt="GP 11">
+            <!-- VUELTA 2 (02) -->
+            <article class="galeria-item alpine">
+                <img src="images/galeria/Alpine/alpine-02.jpg" alt="Alpine 02">
             </article>
-            <article class="galeria-item">
-                <img src="images/galeria/12.jpg" alt="GP 12">
+            <article class="galeria-item aston-martin">
+                <img src="images/galeria/Aston-martin/aston-martin-02.jpg" alt="Aston Martin 02">
             </article>
-
-            <!-- Fila 6 -->
-            <article class="galeria-item">
-                <img src="images/galeria/13.jpg" alt="GP 13">
+            <article class="galeria-item ferrari">
+                <img src="images/galeria/Ferrari/ferrari-02.jpg" alt="Ferrari 02">
             </article>
-            <article class="galeria-item galeria-mas--ancho">
-                <img src="images/galeria/14.jpg" alt="GP 14">
+            <article class="galeria-item haas">
+                <img src="images/galeria/Haas/haas-02.jpg" alt="Haas 02">
             </article>
-
-            <!-- Fila 7 -->
-            <article class="galeria-item">
-                <img src="images/galeria/15.jpg" alt="GP 15">
+            <article class="galeria-item kick-sauber">
+                <img src="images/galeria/Kick-sauber/kick-02.jpg" alt="Kick Sauber 02">
             </article>
-            <article class="galeria-item">
-                <img src="images/galeria/16.jpg" alt="GP 16">
+            <article class="galeria-item mclaren">
+                <img src="images/galeria/McLaren/mclaren-02.jpg" alt="McLaren 02">
             </article>
-            <article class="galeria-item">
-                <img src="images/galeria/17.jpg" alt="GP 17">
+            <article class="galeria-item mercedes">
+                <img src="images/galeria/Mercedes/mercedes-02.jpg" alt="Mercedes 02">
             </article>
-
-            <!-- Fila 8 -->
-            <article class="galeria-item galeria-mas--ancho">
-                <img src="images/galeria/18.jpg" alt="GP 18">
+            <article class="galeria-item red-bull">
+                <img src="images/galeria/Red-bull/redbull-02.jpg" alt="Red Bull 02">
             </article>
-            <article class="galeria-item">
-                <img src="images/galeria/19.jpg" alt="GP 19">
+            <article class="galeria-item williams">
+                <img src="images/galeria/Williams/williams-02.jpg" alt="Williams 02">
             </article>
 
-            <!-- Fila 9 -->
-            <article class="galeria-item">
-                <img src="images/galeria/20.jpg" alt="GP 20">
+            <!-- VUELTA 3 (03) -->
+            <article class="galeria-item alpine">
+                <img src="images/galeria/Alpine/alpine-03.jpg" alt="Alpine 03">
             </article>
-            <article class="galeria-item galeria-mas--ancho">
-                <img src="images/galeria/21.jpg" alt="GP 21">
+            <article class="galeria-item aston-martin">
+                <img src="images/galeria/Aston-martin/aston-martin-03.jpg" alt="Aston Martin 03">
+            </article>
+            <article class="galeria-item ferrari">
+                <img src="images/galeria/Ferrari/ferrari-03.jpg" alt="Ferrari 03">
+            </article>
+            <article class="galeria-item haas">
+                <img src="images/galeria/Haas/haas-03.jpg" alt="Haas 03">
+            </article>
+            <article class="galeria-item kick-sauber">
+                <img src="images/galeria/Kick-sauber/kick-03.jpg" alt="Kick Sauber 03">
+            </article>
+            <article class="galeria-item mclaren">
+                <img src="images/galeria/McLaren/mclaren-03.jpg" alt="McLaren 03">
+            </article>
+            <article class="galeria-item mercedes">
+                <img src="images/galeria/Mercedes/mercedes-03.jpg" alt="Mercedes 03">
+            </article>
+            <article class="galeria-item red-bull">
+                <img src="images/galeria/Red-bull/redbull-03.jpg" alt="Red Bull 03">
+            </article>
+            <article class="galeria-item williams">
+                <img src="images/galeria/Williams/williams-03.jpg" alt="Williams 03">
             </article>
 
-            <!-- Fila 10 -->
-            <article class="galeria-item">
-                <img src="images/galeria/22.jpg" alt="GP 22">
+            <!-- VUELTA 4 (04) -->
+            <article class="galeria-item alpine">
+                <img src="images/galeria/Alpine/alpine-04.jpg" alt="Alpine 04">
             </article>
-            <article class="galeria-item">
-                <img src="images/galeria/23.jpg" alt="GP 23">
+            <article class="galeria-item aston-martin">
+                <img src="images/galeria/Aston-martin/aston-martin-04.jpg" alt="Aston Martin 04">
             </article>
-            <article class="galeria-item">
-                <img src="images/galeria/24.jpg" alt="GP 24">
+            <article class="galeria-item ferrari">
+                <img src="images/galeria/Ferrari/ferrari-04.jpg" alt="Ferrari 04">
+            </article>
+            <article class="galeria-item haas">
+                <img src="images/galeria/Haas/haas-04.jpg" alt="Haas 04">
+            </article>
+            <article class="galeria-item kick-sauber">
+                <img src="images/galeria/Kick-sauber/kick-04.jpg" alt="Kick Sauber 04">
+            </article>
+            <article class="galeria-item mclaren">
+                <img src="images/galeria/McLaren/mclaren-04.jpg" alt="McLaren 04">
+            </article>
+            <article class="galeria-item mercedes">
+                <img src="images/galeria/Mercedes/mercedes-04.jpg" alt="Mercedes 04">
+            </article>
+            <article class="galeria-item red-bull">
+                <img src="images/galeria/Red-bull/redbull-04.jpg" alt="Red Bull 04">
+            </article>
+            <article class="galeria-item williams">
+                <img src="images/galeria/Williams/williams-04.jpg" alt="Williams 04">
             </article>
 
+            <!-- VUELTA 5 (05) -->
+            <article class="galeria-item alpine">
+                <img src="images/galeria/Alpine/alpine-05.jpg" alt="Alpine 05">
+            </article>
+            <article class="galeria-item aston-martin">
+                <img src="images/galeria/Aston-martin/aston-martin-05.jpg" alt="Aston Martin 05">
+            </article>
+            <article class="galeria-item ferrari">
+                <img src="images/galeria/Ferrari/ferrari-05.jpg" alt="Ferrari 05">
+            </article>
+            <article class="galeria-item haas">
+                <img src="images/galeria/Haas/haas-05.jpg" alt="Haas 05">
+            </article>
+            <article class="galeria-item kick-sauber">
+                <img src="images/galeria/Kick-sauber/kick-05.jpg" alt="Kick Sauber 05">
+            </article>
+            <article class="galeria-item mclaren">
+                <img src="images/galeria/McLaren/mclaren-05.jpg" alt="McLaren 05">
+            </article>
+            <article class="galeria-item mercedes">
+                <img src="images/galeria/Mercedes/mercedes-05.jpg" alt="Mercedes 05">
+            </article>
+            <article class="galeria-item red-bull">
+                <img src="images/galeria/Red-bull/redbull-05.jpg" alt="Red Bull 05">
+            </article>
+            <article class="galeria-item williams">
+                <img src="images/galeria/Williams/williams-05.jpg" alt="Williams 05">
+            </article>
+
+            <!-- VUELTA 6 (06) -->
+            <article class="galeria-item alpine">
+                <img src="images/galeria/Alpine/alpine-06.jpg" alt="Alpine 06">
+            </article>
+            <article class="galeria-item aston-martin">
+                <img src="images/galeria/Aston-martin/aston-martin-06.jpg" alt="Aston Martin 06">
+            </article>
+            <article class="galeria-item ferrari">
+                <img src="images/galeria/Ferrari/ferrari-06.jpg" alt="Ferrari 06">
+            </article>
+            <article class="galeria-item haas">
+                <img src="images/galeria/Haas/haas-06.jpg" alt="Haas 06">
+            </article>
+            <article class="galeria-item kick-sauber">
+                <img src="images/galeria/Kick-sauber/kick-06.jpg" alt="Kick Sauber 06">
+            </article>
+            <article class="galeria-item mclaren">
+                <img src="images/galeria/McLaren/mclaren-06.jpg" alt="McLaren 06">
+            </article>
+            <article class="galeria-item mercedes">
+                <img src="images/galeria/Mercedes/mercedes-06.jpg" alt="Mercedes 06">
+            </article>
+            <article class="galeria-item red-bull">
+                <img src="images/galeria/Red-bull/red-bull06.jpg" alt="Red Bull 06">
+            </article>
+            <article class="galeria-item williams">
+                <img src="images/galeria/Williams/williams-06.jpg" alt="Williams 06">
+            </article>
+
+            <!-- VUELTA 7 (07) -->
+            <article class="galeria-item alpine">
+                <img src="images/galeria/Alpine/alpine-07.jpg" alt="Alpine 07">
+            </article>
+            <article class="galeria-item aston-martin">
+                <img src="images/galeria/Aston-martin/aston-martin-07.jpg" alt="Aston Martin 07">
+            </article>
+            <article class="galeria-item ferrari">
+                <img src="images/galeria/Ferrari/ferrari-07.jpg" alt="Ferrari 07">
+            </article>
+            <article class="galeria-item haas">
+                <img src="images/galeria/Haas/haas-07.jpg" alt="Haas 07">
+            </article>
+            <article class="galeria-item kick-sauber">
+                <img src="images/galeria/Kick-sauber/kick-07.jpg" alt="Kick Sauber 07">
+            </article>
+            <article class="galeria-item mclaren">
+                <img src="images/galeria/McLaren/mclaren-07.jpg" alt="McLaren 07">
+            </article>
+            <article class="galeria-item mercedes">
+                <img src="images/galeria/Mercedes/mercedes-07.jpg" alt="Mercedes 07">
+            </article>
+            <article class="galeria-item red-bull">
+                <img src="images/galeria/Red-bull/redbull-07.jpg" alt="Red Bull 07">
+            </article>
+            <article class="galeria-item williams">
+                <img src="images/galeria/Williams/williams-07.jpg" alt="Williams 07">
+            </article>
+
+            <!-- VUELTA 8 (08) -->
+            <article class="galeria-item alpine">
+                <img src="images/galeria/Alpine/alpine-08.jpg" alt="Alpine 08">
+            </article>
+            <article class="galeria-item aston-martin">
+                <img src="images/galeria/Aston-martin/aston-martin-08.jpg" alt="Aston Martin 08">
+            </article>
+            <article class="galeria-item ferrari">
+                <img src="images/galeria/Ferrari/ferrari-08.jpg" alt="Ferrari 08">
+            </article>
+            <article class="galeria-item haas">
+                <img src="images/galeria/Haas/haas-08.jpg" alt="Haas 08">
+            </article>
+            <article class="galeria-item kick-sauber">
+                <img src="images/galeria/Kick-sauber/kick-08.jpg" alt="Kick Sauber 08">
+            </article>
+            <article class="galeria-item mclaren">
+                <img src="images/galeria/McLaren/mclaren-08.jpg" alt="McLaren 08">
+            </article>
+            <article class="galeria-item mercedes">
+                <img src="images/galeria/Mercedes/mercedes-08.jpg" alt="Mercedes 08">
+            </article>
+            <article class="galeria-item red-bull">
+                <img src="images/galeria/Red-bull/redbull-08.jpg" alt="Red Bull 08">
+            </article>
+            <article class="galeria-item williams">
+                <img src="images/galeria/Williams/williams-08.jpg" alt="Williams 08">
+            </article>
+
+            <!-- VUELTA 9 (09) -->
+            <article class="galeria-item alpine">
+                <img src="images/galeria/Alpine/alpine-09.jpg" alt="Alpine 09">
+            </article>
+            <article class="galeria-item aston-martin">
+                <img src="images/galeria/Aston-martin/aston-martin-09.jpg" alt="Aston Martin 09">
+            </article>
+            <article class="galeria-item ferrari">
+                <img src="images/galeria/Ferrari/ferrari-09.jpg" alt="Ferrari 09">
+            </article>
+            <article class="galeria-item haas">
+                <img src="images/galeria/Haas/haas-09.jpg" alt="Haas 09">
+            </article>
+            <article class="galeria-item kick-sauber">
+                <img src="images/galeria/Kick-sauber/kick-09.jpg" alt="Kick Sauber 09">
+            </article>
+            <article class="galeria-item mclaren">
+                <img src="images/galeria/McLaren/mclaren-09.jpg" alt="McLaren 09">
+            </article>
+            <article class="galeria-item mercedes">
+                <img src="images/galeria/Mercedes/mercedes-09.jpg" alt="Mercedes 09">
+            </article>
+            <article class="galeria-item red-bull">
+                <img src="images/galeria/Red-bull/redbull-09.jpg" alt="Red Bull 09">
+            </article>
+            <article class="galeria-item williams">
+                <img src="images/galeria/Williams/williams-09.jpg" alt="Williams 09">
+            </article>
+        </div>
+
+        <!-- Función de lightbox para la galería. Ampliar imágenes -->
+
+        <div id="lightbox" class="lightbox">
+            <span class = "lightbox-cerrar">&times;</span>
+            <img id="lightbox-imagen" src="" alt="Imagen ampliada">
         </div>
     </section>
 </main>
+
+<!-- JQuery para la galería. Filtrar imagenes de la galería por escudería -->
+
+<script src = "https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function() {
+
+        //Filtro para ver la galería de tosas las escuderías o una por una
+        $('.filtro-boton').on('click',function(){
+            const filtro = $(this).data('filter');
+
+
+            $('.filtro-boton').removeClass('activo');
+            $(this).addClass('activo');
+
+            if (filtro == 'all'){
+                $('.galeria-item').fadeIn(200);
+            } else{
+                $('.galeria-item').hide();
+                $('.galeria-item.' + filtro).fadeIn(200);
+            }
+        });
+
+        //Implementación de lightbox para ampliar la imagen al hacer clic
+
+        $('.galeria-item img').on('click',function(){
+            const src = $(this).attr('src');
+            const alt = $(this).attr('alt') || 'Foto de la galería';
+
+            $('#lightbox-imagen').attr('src', src).attr('alt',alt);
+            $('#lightbox').css('display','flex');
+        });
+
+        //Para cerrar la imagen haciendo clic en la X
+        $('.lightbox-cerrar').on('click', function () {
+        $('#lightbox').hide();
+    });
+});
+</script>
+
+
+
+<!-- Footer de la página -->
+
+<footer class = "site-footer">
+    <div class = "footer-inner">
+        <div class="footer-left">
+            <img src="images/logo/Logo-F1.png" alt="FAST F1" class="footer-logo">
+            <span>FAST - Fan page de Fórmula 1</span>
+        </div>
+        <div class="footer-right">
+            <span>© 2025 FAST F1</span>
+            <a href="#">Términos legales</a>
+            <a href="#">Política de privacidad</a>
+            <a href="#">Contacto</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

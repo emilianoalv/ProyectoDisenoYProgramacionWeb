@@ -69,6 +69,73 @@
     box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
 }
 
+/* Para darle estilo a los botones */
+
+.galeria-filtros{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin: 3px 0 40px;
+}
+
+.filtro-boton {
+    font-family: 'Sansation', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 6px 16px;
+    border-radius: 999px;   
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    color: #000000;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+    font-weight: 500;
+}
+
+.filtro-boton:hover {
+    transform: translateY(-1px);
+    background-color: #111827;
+    color: #ffffff;
+}
+
+.filtro-boton.activo {
+    background-color: #e11d48;
+    border-color: #e11d48;
+    color: #f9fafb;
+}
+
+
+/* Para lightbox. Imagen ampliada */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.lightbox img{
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 1.5rem;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+}
+
+.lightbox-cerrar {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2.2rem;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+
 /* Versión móvil */
 
 @media (max-width: 768px) {

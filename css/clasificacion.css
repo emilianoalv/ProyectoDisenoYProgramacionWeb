@@ -103,3 +103,26 @@
 .tabla-clasificacion td:nth-child(2){
     width: 28%
 }
+
+
+/*Responsive*/
+
+@media (max-width: 768px){
+    .encabezado-clasificacion h1{
+        font-size: 1.6rem
+    }
+
+    .clasificacion-pilotos > h2,
+    .clasificacion-equipos > h2 {
+        font-size: 1.3rem;
+    }
+
+    .tabla-clasificacion{
+        font-size:0.9rem;
+    }
+
+    .tabla-clasificacion th,
+    .tabla-clasificacion td{
+        padding:10px 12px;
+    }
+}

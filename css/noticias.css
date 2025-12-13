@@ -214,10 +214,10 @@
 
 
 /* ==========================
-   Para el responive
+   Responsive
 ===========================*/
 
-@media (max-width: 960px) {
+@media (max-width: 768px) {
     .principal-layout {
         grid-template-columns: 1fr;
     }
