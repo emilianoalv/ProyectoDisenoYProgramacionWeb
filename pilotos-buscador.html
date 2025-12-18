@@ -30,13 +30,15 @@
 
                 <!-- ACTIVIDADES CON DESPLEGABLE -->
                 <li class="dropdown">
-                    <a href="actividades.html">
+                    <a href="#" class="dropdown-toggle">
                         Actividades <span class="arrow">▾</span>
                     </a>
                     <ul class="dropdown-menu">
                         
                         <li><a href="clasificacion.html">Clasificación</a></li>
                         <li><a href="calendario-gp.html">Calendario grandes premios</a></li>
+
+                        <!-- Marco "Pilotos" como página actual dentro del dropdown -->
                         <li><a href="pilotos-buscador.html" class="activo">Pilotos</a></li>
                         <li><a href="glosario.html">Glosario</a></li>
                     </ul>
@@ -51,16 +53,28 @@
     </div>
 </header>
 
+
+<!-- Página para el buscador de los pilotos con AJAX que contiene:
+     - Encabezado con título y explicación
+     - Barra con input y botón
+     - Mensaje de estado para mostrar que está cargando, los resultados y sin resultados
+     - Contenedor donde JS inyecta las tarjetas de pilotos-->
 <main>
     <section id="buscador-pilotos" class="buscador-pilotos">
+        <!-- Título de la sección-->
         <div class="buscador-pilotos-encabezado">
             <h2>Pilotos de Fórmula 1</h2>
             <div class="section-underline"></div>
+
+            <!-- Texto que aparece en la página para guiar un poco al usuario
+             sobre lo que puede hacer-->
             <p class="buscador-pilotos-texto">
                 Busca pilotos por nombre, equipo o número.
             </p>
         </div>
 
+        <!-- Barra de búsqueda con input para escribir y
+          botón para hacer la búsqueda -->
         <div class="buscador-pilotos-barra">
             <input
                 type="text"
@@ -70,14 +84,17 @@
             <button id="botonBuscar">Buscar</button>
         </div>
 
+        <!-- Para mostrar el estado cuando se buscan los pilotos-->
         <p id="estado" class="buscador-pilotos-estado">Cargando pilotos...</p>
 
+        <!-- Contenedor donde se insertan las cards con JavaScript -->
         <div id="resultados" class="pilotos-grid-dinamica">
             <!-- Para insertar los pilotos con JS -->
         </div>
     </section>
 
-    <script src="app.js"></script>
+    <!-- Script del buscador de los pilotos-->
+    <script src="javascript/app.js"></script>
 </main>
 
 

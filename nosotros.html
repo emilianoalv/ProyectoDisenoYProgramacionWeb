@@ -8,7 +8,7 @@
     <!-- Fuente y CSS general -->
     <link href="https://fonts.cdnfonts.com/css/sansation" rel="stylesheet">
     
-    <!-- CSS global y de clasificación -->
+    <!-- CSS global y de nosotros -->
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/nosotros.css">
 
@@ -30,7 +30,7 @@
 
                 <!-- ACTIVIDADES CON DESPLEGABLE -->
                 <li class="dropdown">
-                    <a href="actividades.html">
+                    <a href="#" class="dropdown-toggle">
                         Actividades <span class="arrow">▾</span>
                     </a>
                     <ul class="dropdown-menu">
@@ -55,6 +55,10 @@
         <!-- ============================
              SECCIÓN QUIÉNES SOMOS
         ============================== -->
+
+        <!-- A la izquierda muestro una frase como introducción a la sección y
+         a la derecha el texto de la presentación para que el usuario a quién va
+         dirigida la página -->
         <section class="nosotros">
 
             <div class="nosotros-intro">
@@ -101,6 +105,9 @@
             <!-- ============================
                  SECCIÓN VALORES
             ============================== -->
+
+            <!-- Aquí el acomodo de esta sección lo hago en 4 cards, cada una con
+             un valor distinto de la página -->
             <section class="valores">
                 <h2>Valores</h2>
                 <div class="section-underline"></div>
@@ -144,6 +151,14 @@
 
         </section>
 
+        <!-- ============================
+                 SECCIÓN CONTACTO 
+            ============================== -->
+
+        <!-- La sección tiene dos tarjetas principales con datos de contacto:
+         - Formulario con la ayuda de la validación de la API de HTML5, puede revisar
+         si se completan los campos
+         - Panel con datos (teléfono, mapa, dirección, correo)-->    
         <section id="contacto" class="contacto">
         <div class="contacto-encabezado">
             <h2>Contáctanos</h2>
@@ -153,6 +168,7 @@
         <div class="contacto-contenido">
             <!-- HTML para el formulario -->
 
+            <!-- Formulario en el que uso required y novalidate para controlar mensajes con JS -->
             <div class="contacto-formulario">
                 <h3>Formulario de contacto</h3>
 
@@ -170,6 +186,7 @@
                     <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje..." required></textarea>
 
                     <button type="submit" class="boton-enviar">Enviar</button>
+                    <p id="form-exito" class="form-exito" aria-live="polite"></p> <!-- Mensaje de éxito al enviar -->
                 </form>
             </div>
 
@@ -183,7 +200,7 @@
                 <p>No importa si eres un fan, prensa o marca: ¡nos encantará escucharte!</p>
             </div>
 
-        <!-- HTML para la api de ubicación --> 
+        <!-- HTML para la api de ubicación. Botón que lanza la API HTML5 de geolocalización --> 
          
         <div class="contacto-ubicacion">
             <button id="boton-ubicacion" class="boton-ubicacion">
@@ -192,6 +209,7 @@
             <p id="mensaje-ubicacion" class="mensaje-ubicacion"></p>
         </div>
 
+            <!-- Datos de contacto en formato de cards -->
             <div class="contacto-datos">
                 <div class="contacto-item">
                     <img src="images/logos-contacto/telefono.png" alt="Teléfono" class="contacto-icono">
@@ -218,6 +236,7 @@
                 </div>
             </div>
 
+            <!-- Aquí dejo una captura de Google Maps con la ubicación estática de la sede de la página web -->
             <div class="contacto-mapa">
                 <img src="images/mapa/mapa-fast-2.png" alt="Ubicación de la oficina">
             </div>
@@ -249,64 +268,81 @@
         APIS HTML5
     ============================== -->
 
-<!-- JavaScript para la api de ubicación --> 
+<!-- JavaScript para la API HTML5 de geolocalización -->
 <script>
-document.addEventListener('DOMContentLoaded', function (){
+document.addEventListener('DOMContentLoaded', function () {
+    // Referencias a los elementos del HTML (botón y contenedor del mensaje)
     const botonUbicacion = document.getElementById('boton-ubicacion');
     const mensajeUbiacion = document.getElementById('mensaje-ubicacion');
 
-    if(!botonUbicacion || !mensajeUbiacion) return;
+    // Si los elementos no existen en esta página, no hacemos nada para evitar errores
+    if (!botonUbicacion || !mensajeUbiacion) return;
 
-    botonUbicacion.addEventListener('click',function(){
-        if(!navigator.geolocation){
+    // Al hacer clic en el botón, se solicita la ubicación del usuario
+    botonUbicacion.addEventListener('click', function () {
+
+        // Verificación básica: si el navegador no soporta geolocalización, mostramos aviso
+        if (!navigator.geolocation) {
             mensajeUbiacion.textContent = "Tu navegador no soporta la geolocalización.";
             return;
         }
 
+        // Mensaje mientras el navegador obtiene la ubicación
         mensajeUbiacion.textContent = "Obteniendo tu ubicación...";
 
+        // API HTML5: Geolocation (obtiene latitud y longitud del usuario)
         navigator.geolocation.getCurrentPosition(
-            function (posicion){
+            // Éxito: se obtienen coordenadas
+            function (posicion) {
                 const lat = posicion.coords.latitude;
                 const lon = posicion.coords.longitude;
 
-                //Coordenas de mi ubicación ficticia
+                // Coordenadas de la sede (destino fijo)
                 const sedeLat = 40.4168;
                 const sedeLon = -3.7038;
 
+                // Genera un enlace a Google Maps con la ruta: usuario -> sede
                 const urlRuta = `https://www.google.com/maps/dir/${lat},${lon}/${sedeLat},${sedeLon}`;
 
+                // Muestra el enlace en pantalla (se usa innerHTML para incluir <a>)
                 mensajeUbiacion.innerHTML = `Hemos detectado tu ubicación aproximada. <br>
-                <a href= "${urlRuta}" target="_blank" rel="noopener noreferrer">
+                <a href="${urlRuta}" target="_blank" rel="noopener noreferrer">
                     Ver ruta hacia nuestra sede en Google Maps
-                </a>
-            `;
+                </a>`;
             },
-            function (error){
+
+            // Error: permisos denegados, ubicación no disponible, timeout, etc.
+            function (error) {
                 let texto = 'Ocurrió un problema para obtener tu ubicación';
 
-                if(error.code == 1){
+                // error.code = 1 -> usuario denegó permisos
+                if (error.code == 1) {
                     texto = 'Has negado el permiso de tu ubicación.';
                 }
-                else if(error.code == 2){
+                // error.code = 2 -> no se pudo obtener ubicación
+                else if (error.code == 2) {
                     texto = 'No se pudo determinar tu ubicación.';
                 }
-                else if (error.code == 3){
+                // error.code = 3 -> tardó demasiado (timeout)
+                else if (error.code == 3) {
                     texto = 'La petición para obtener la ubicación ha tardado más de lo normal.';
                 }
 
+                // Muestra el mensaje final en pantalla
                 mensajeUbiacion.textContent = texto;
-                
             },
-        {
-            enableHighAccuracy: true,
-            timeout: 7000,
-            maximumAge: 0
-        }
-    );
-    });        
+
+            // Opciones: mayor precisión, límite de espera y uso de caché
+            {
+                enableHighAccuracy: true,
+                timeout: 7000,
+                maximumAge: 0
+            }
+        );
+    });
 });
 </script>
+
 
 <!-- JavaScript para la api de formulario --> 
 
@@ -317,17 +353,24 @@ document.addEventListener('DOMContentLoaded', function () {
     const nombre = document.getElementById('nombre');
     const titulo  = document.getElementById('titulo');
     const mensaje = document.getElementById('mensaje');
+    const exito = document.getElementById('form-exito');
+
+    if(!form) return;
 
     form.addEventListener('submit',function(e){
+        e.preventDefault();
         let esValido = true;
     
         //Para eliminar mensajes previos
 
-        email.setCustomValidity(''); //Por si el usuario escribe en los siguientes intentos correctamente el correo para que no se quede bugeado  
+        /*Por si el usuario escribe en los siguientes intentos 
+        correctamente el correo para que no se quede bugeado*/  
+
+        email.setCustomValidity(''); 
         nombre.setCustomValidity('');
         titulo.setCustomValidity('');
         mensaje.setCustomValidity('');
-
+        if(exito) exito.textContent ="";
 
         //Validaciones para el nombre
         if(!nombre.checkValidity()){
@@ -358,10 +401,15 @@ document.addEventListener('DOMContentLoaded', function () {
             esValido = false;
         }
 
-        if(!esValido){
-            e.preventDefault(); //Para evitar que se envíe el formulario 
+        //Si hay errores no se manda el form
+        if(!esValido){ 
             form.reportValidity(); //Para mostrar los mensajes antes puestos
+            return;
         }
+
+        //Si todo está bien se manda y resetea campos
+        if (exito) exito.textContent = "✅ ¡Listo! Tu mensaje se envió correctamente.";
+        form.reset();
     });
 });
 </script>

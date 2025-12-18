@@ -1,32 +1,45 @@
-/* ==========================
-   SECCIÓN PRÓXIMAS CARRERAS
-===========================*/
+/* -------------------------
+   Página "Calendario grandes premios"
+------------------------- */
 
+/*Se usa el CSS grid nuevamente para que las tarjetas se coloquen
+en columnas*/
 .carreras-grid {
     display: grid;
-    /*Cada tarjeta mide aprox 260px, con lo que, si no caben 2, pasa a una columna*/
+    /*Cada tarjeta mide aprox 260px, con lo que, si no caben 2, 
+    pasa a una columna*/
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+    /*Espacio entre tarjetas*/
     gap: 24px;
 }
 
-/* Card de carrera */
+/* Estilo para cada tarjeta de GP */
 .carrera {
+    /*Fondo blanco y bordes redondeados*/
     background-color: #ffffff;
     border-radius: 24px;
     overflow: hidden;
+    /* Sombra para las tarjetas de los GP*/
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    /*Se coloca el contenido en columna, siguiendo un orden,
+    primero la imagen, texto y bandera*/
     display: flex;
     flex-direction: column;
     margin: 3px;
+    /*Una pequeña transición para cuando se pasa el mouse por encima*/
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+
+/* Efecto al pasar el mouse. La tarjeta sube un poco y la sombra sube también */
 .carrera:hover {
     transform: translateY(-4px);
     box-shadow: 0 16px 32px rgba(0,0,0,0.18);
 }
 
-/* Foto circuito */
+/* Foto circuito.
+La hago ocupar todo el ancho de la tarjeta y redondeo las esquinas de arriba. */
 .carrera > img {
     width: 100%;
     display: block;
@@ -38,38 +51,49 @@
     padding: 15px 15px 18px;
 }
 
+/* Título del GP (por ejemplo "GP de Australia") */
 .carrera .info-carrera h3 {
     font-size: 1.5rem;
     margin-bottom: 4px;
 }
 
+/* Texto del circuito y la fecha */
 .carrera .info-carrera p {
     font-size: 1.2rem;
 }
 
+/* Contenedor de la bandera.
+Usé margin-left: auto para empujarla a la derecha*/
 .carrera .bandera-carrera {
     margin-left: auto;
     padding: 0 20px 20px;
 }
 
+/*Imagen de la bandera. Para esto fijo su altura y el ancho se adapta solo*/
 .carrera .bandera-carrera img {
     height: 44px;
     width: auto;
     display: block;
 }
 
-/*Responsive*/
+/* ==========================
+   Responsive
+===========================*/
 
 @media (max-width: 768px){
+    /*Para celualres pongo las tarjetas una debajo de otra en una sola
+    columna y reduzco un poco el espacio de separación entre ellas*/
     .carreras-grid{
         grid-template-columns: 1fr;
         gap:16px;
     }
     
+    /* Para aprovechar mejor el ancho del teléfono, quito el margen extra*/
     .carrera{
         margin:0;
     }
 
+    /* Hago los textos un poco más pequeños para que se vean mejor en pantallas chicas */
     .carrera .info-carrera h3{
         font-size: 1.3rem
     }

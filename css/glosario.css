@@ -1,5 +1,10 @@
-/* ======== GLOSARIO F1 ======== */
+/* -------------------------
+   Página "Glosario"
+------------------------- */
 
+/*Este es el contenedor del glosario
+Limito el ancho, lo ajusto más al centro y dejo el 
+padding similar a mi diseño de Figma*/
 .glosario {
     max-width: 1000px;
     margin: 40px auto 80px;
@@ -8,7 +13,7 @@
     background-color: #ffffff;
 }
 
-/*Titulo principal*/
+/*Titulo principal de la página*/
 
 .glosario-header h1{
     font-size: 2.0rem;
@@ -16,6 +21,9 @@
     margin:0;
 }
 
+/*Sirve para el subrayado en rojo que quiero
+en todos los títulos de las secciones de la
+página*/
 .glosario-underline {
     display: block;
     width: 150px;
@@ -26,10 +34,13 @@
 }
 
 /*Lista de términos*/
+/*Aquí van todos los términos del glosario*/
 .glosario-lista {
     margin-top: 40px;
 }
 
+/*Uso flex para ponoer el número del término a la
+izquierda y el término y su definición a la derecha*/
 .glosario-item {
     display: flex;
     align-items:flex-start;
@@ -37,14 +48,16 @@
     /*column-gap: 32px;*/
     gap:40px;
     padding: 40px 0 50px;
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0; /*Sirve como separador*/
 }
 
+/*Esto es para que el último término del glosario
+cierre con una línea abajo*/
 .glosario-item:last-child {
     border-bottom: 1px solid #e0e0e0;
 }
 
-/*Numero de la izquierda*/
+/*Numero de la izquierda del término del glosario*/
 .glosario-numero {
     font-size: 2rem;
     font-weight: 600;
@@ -55,6 +68,7 @@
     align-items: flex-start;*/
 }
 
+/*Contenedor para el texto del término*/
 .glosario-contenido {
     max-width: 720px;  /* hace que el texto no se vea ancho */
 }
@@ -66,6 +80,7 @@
     margin: 0 0 12px;
 }
 
+/*Descripción del término*/ 
 .glosario-contenido p {
     font-size: 1.1rem;
     line-height: 1.7;
@@ -78,12 +93,15 @@
     margin-top: 12px;
 }
 
+/*Esto sirve para resaltar la frase de relevante 
+en negrita e italica*/
 .dato-relevante span {
     font-weight: 700;
     font-style: italic;
 }
 
 /* Imagen */
+/*La centro y le pongo bordes redondeados*/
 .glosario-imagen {
     margin-top: 30px;
     max-width: 750px;
@@ -93,6 +111,8 @@
     overflow: hidden;
 }
 
+/*Para que la imagen pueda hacerse responsive 
+y no se corte*/
 .glosario-imagen img {
     display: block;
     width: 100%;
@@ -100,17 +120,17 @@
     object-fit: cover;
 }
 
-/* Responsivo */
+/* ==========================
+   Responsive
+===========================*/
+
 @media (max-width: 768px) {
+    /* Reduzco el padding lateral para el teléfono*/
     .glosario {
         padding: 0 16px;
     }
 
-    .glosario-item {
-        grid-template-columns: 1fr;
-        row-gap: 8px;
-    }
-
+    /*Reduzco el tamaño del número para el celular*/
     .glosario-numero {
         font-size: 1.4rem;
     }

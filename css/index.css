@@ -1,6 +1,10 @@
-/* ==========================
-   SECCIÓN NOTICIAS
-===========================*/
+/* -------------------------
+   Página "Inicio"
+------------------------- */
+
+/*Para el contenedor de la mini sección de 
+noticias, la cual le doy un margen arriba para
+darle un poco de separación de la NavBar*/
 .noticias {
     margin-top: 40px;
 }
@@ -11,15 +15,20 @@
     margin-bottom: 26px;
 }
 
+/*Al pasar por encima de la card mmuestra un cursor
+para teclear y le da un efecto hover*/
 .principal article {
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
+/*Efecto del hover para que se haga un poco más grande
+esa parte*/
 .principal article:hover {
     transform: scale(1.02);
 }
 
+/*Estilo para la imagen prinicipal de las noticias*/
 .principal img {
     width: 100%;
     display: block;
@@ -27,11 +36,13 @@
     margin-bottom: 16px;
 }
 
+/*Para el título de la noticia principal*/
 .principal h3 {
     font-size: 1.6rem;
     margin-bottom: 8px;
 }
 
+/*Estilo de la descripción de la noticia*/
 .principal .descripcion {
     font-size: 1.1rem;
     color: #333333;
@@ -41,19 +52,25 @@
 /* Noticias secundarias */
 .secundarias {
     display: grid;
+    /*En computadora se muestran en 2 columnas de 
+    dos noticias cada una*/
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 16px;
 }
 
+/*Aplico el mismo efecto para darle clic a la noticia
+como lo hice con la principal*/
 .secundarias article {
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
+/*Mismo efecto que en la principal*/
 .secundarias article:hover {
     transform: scale(1.02);
 }
 
+/*Para el estilo de las noticias secundarias*/
 .secundarias img {
     width: 100%;
     display: block;
@@ -69,21 +86,26 @@
 /* ==========================
    SECCIÓN PRÓXIMAS CARRERAS
 ===========================*/
+
+/*Un margen de separación de la sección anterior*/
 .proximas-carreras {
     margin-top: 50px;
 }
 
+/*El despliegue de las carreras es en dos columnas*/
 .carreras-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px;
 }
 
-/* Card de carrera */
+/* Card de cada carrera */
+/* Le doy sombra, bordes redondeados 
+y transición para hover */
 .carrera {
     background-color: #ffffff;
     border-radius: 24px;
-    overflow: hidden;
+    overflow: hidden; /*borde redondo en la imagen*/
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
     display: flex;
     flex-direction: column;
@@ -91,6 +113,8 @@
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+/*Efecto para que se levante un poco y aumente
+la sombra de la tarjeta*/
 .carrera:hover {
     transform: translateY(-4px);
     box-shadow: 0 16px 32px rgba(0,0,0,0.18);
@@ -108,15 +132,18 @@
     padding: 15px 15px 18px;
 }
 
+/*Para el estilo del título de cada carrera*/
 .carrera .info-carrera h3 {
     font-size: 1.5rem;
     margin-bottom: 4px;
 }
 
+/*Para el estilo del texto de cada carrera*/
 .carrera .info-carrera p {
     font-size: 1.2rem;
 }
 
+/*Para definir el tamaño de cada bandera y posición*/
 .carrera .bandera-carrera {
     margin-left: auto;
     padding: 0 20px 20px;
@@ -131,16 +158,21 @@
 /* ==========================
    SECCIÓN CLASIFICACIÓN
 ===========================*/
+
+/* Separación de la sección de clasificación */
 .clasificacion {
     margin-top: 60px;
 }
 
+/*Para el estilo de los títulos internos de la clasificación*/
 .clasificacion h3 {
     margin-top: 24px;
     margin-bottom: 10px;
 }
 
 /* Tablas generales */
+/*En este caso uso border-collapse para que se vea
+redondeado el contenedor*/
 .clasificacion table {
     width: 100%;
     border-collapse: collapse;
@@ -156,12 +188,15 @@
     color: #ffffff;
 }
 
+/*Padding para las celdas de clasificación*/
 .clasificacion th,
 .clasificacion td {
     padding: 10px 14px;
     text-align: left;
 }
 
+/*Le doy un estilo tipo zebra para que el texto sea
+más legible y llamativo*/
 .clasificacion tbody tr:nth-child(even) {
     background-color: #f5f5f5;
 }
@@ -170,6 +205,7 @@
     background-color: #ffffff;
 }
 
+/*Linea para dividir*/
 .clasificacion tbody tr {
     border-bottom: 1px solid #dddddd;
 }
@@ -177,17 +213,20 @@
 /* ==========================
    SECCIÓN PILOTOS F1
 ===========================*/
+
+/*Para la separación con la sección anterior*/
 .pilotos-f1 {
     margin-top: 60px;
 }
 
+/*Para poner dos columnas para mostrar los pilotos*/
 .pilotos-equipos {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 22px;
 }
 
-/* Card por escudería */
+/* Card por escudería que contiene dos pilotos */
 .equipo-pilotos {
     border-radius: 18px;
     overflow: hidden;
@@ -207,6 +246,8 @@
     margin: 0;
 }
 
+/*Se usa nuevamente hover para elevar la tarjeta
+y darle un efecto de sombra*/
 .equipo-pilotos:hover {
     transform: translateY(-4px);
     box-shadow: 0 16px 32px rgba(0,0,0,0.18);
@@ -229,6 +270,8 @@
     position: relative; /*Para before*/
 }
 
+/*Con esto logro poner una linea en medio de los dos
+pilotos para que se puedan ver separados*/
 .pilotos-grid::before {
     content: "";
     position: absolute;
@@ -239,18 +282,16 @@
     left: 50%;
     transform: translateX(-1px);
     z-index: 2;
-    pointer-events: none;
+    pointer-events: none; /*Para no bloquear el efecto
+                        de hover*/
 }
 
-.pilotos-grid .piloto:first-child{
-    border-right: none;
-}
 
 /* Card de piloto individual */
 .piloto {
     padding: 10px 0 15px;
     text-align: center;
-    position: relative;
+    position: relative; /*Para posicionar el número*/
 }
 
 /* Número de auto */
@@ -281,6 +322,8 @@
     gap:10px;
 }
 
+/*Para definir el estilo o tipografía de
+nombre y apellido de cada piloto*/
 .info-piloto .nombre,
 .info-piloto .apellido {
     font-family: 'Sansation', Arial, sans-serif;
@@ -290,6 +333,7 @@
     margin: 0;
 }
 
+/*Bandera del piloto*/
 .bandera-piloto{
     height: 32px;
     width:auto;
@@ -298,10 +342,13 @@
 /* ==========================
    SECCIÓN EQUIPOS F1
 ===========================*/
+/*Otra separación más para la sección anterior*/
 .equipos-f1 {
     margin-top: 60px;
 }
 
+/*Use una disposición de dos columnas como comunmente
+en esta sección*/
 .equipos-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -320,6 +367,7 @@
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+/*Efecto de hover*/
 .equipo-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 16px 32px rgba(0,0,0,0.18);
@@ -344,6 +392,7 @@
     border-radius: 0 0 24px 24px;
 }
 
+/*Estilo del nombre del equipo*/
 .equipo-info h3 {
     font-size: 1.5rem;
 }
@@ -359,13 +408,29 @@
 ===========================*/
 
 @media (max-width: 768px) {
+
+    /*Para la sección de noticias es mejor pasar de
+    las 4 columnas a 2 en teléfonos*/
     .secundarias {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    /*Aquí lo ajusto a una columna para que no se
+    vea apretado el diseño*/
     .carreras-grid,
     .pilotos-equipos,
     .equipos-grid {
         grid-template-columns: 1fr;
     }
+
+    /*Para las cards de los pilotos*/
+    .info-piloto .nombre,
+    .info-piloto .apellido {
+    font-size: 0.8rem; 
+    }
+
+    .bandera-piloto {
+    height: 20px;
+    }
+  
 }

@@ -15,7 +15,8 @@
 </head>
 <body>
 
-    <!-- NAVBAR -->
+    <!-- NAVBAR 
+     Header reutilizado en todas las páginas para mantener consistencia.-->
     <header class="navbar">
         <div class="logo">
             <img src="images/logo/Logo-F1.png" alt="LogoF1">
@@ -29,7 +30,7 @@
 
                 <!-- ACTIVIDADES CON DESPLEGABLE -->
                 <li class="dropdown">
-                    <a href="actividades.html">
+                    <a href="#" class="dropdown-toggle">
                         Actividades <span class="arrow">▾</span>
                     </a>
                     <ul class="dropdown-menu">
@@ -50,6 +51,9 @@
     </div>
 </header>
 
+<!-- Para el main de la sección utilizo un encabezado , tengo un bloque
+ principal con noticias (principal, secundarias) y otro bloque para más 
+ noticias en forma de lista-->
 <main>
 
         <!-- TÍTULO PRINCIPAL DE LA PÁGINA -->
@@ -58,7 +62,10 @@
             <div class="section-underline"></div>
         </section>
 
+
         <!-- SECCIÓN PRINCIPAL -->
+        <!-- Para la sección principal la idea es destacar una noticia
+         y ponerla en grande y a su lado derecho mostrar otras 4 noticias --> 
         <section class="bloque-principal">
             <h2>Principal</h2>
 
@@ -66,6 +73,8 @@
                 <!-- Noticia principal grande -->
                 <article class="noticia-principal">
                     <figure>
+                        <!-- Aquí envuelto todo con <a> para que el usuario pueda dar
+                            clic en cualquier parte de la noticia -->
                         <a href="noticia-escandalo-pits.html">
                         <img src="images/noticias-2/Principal.jpg">
                         <h3>Escándalo en los pits: la estrategia que dejó sin podio al favorito</h3>
@@ -77,7 +86,7 @@
                     </figure>
                 </article>
 
-                <!-- Otras noticias principales a la derecha -->
+                <!-- Otras noticias principales a la derecha de un tamaño pequeño -->
                 <div class="noticias-principales-laterales">
 
                     <article class="noticia-card">
@@ -120,7 +129,10 @@
             </div>
 
 
-        <!-- SECCIÓN MÁS NOTICIAS -->
+        <!-- SECCIÓN MÁS NOTICIAS 
+         Aquí uso tarjetas horizontales con una imagen a la izquierda y 
+         un texto de la noticia a la derecha para que no se sienta como
+         la sección de arriba-->
         <section class="mas-noticias">
             <h2>Más noticias</h2>
             <div class="section-underline-negra"></div>
@@ -134,6 +146,8 @@
                         <img src="images/noticias-2/mas-noticias-1.jpg" alt="Podio Norris, Verstappen y Piastri">
                         </a>
                     </figure>
+
+                    <!-- Contenido textual separado para controlar padding y alineación con CSS -->
                     <div class="mas-noticia-contenido">
                         <h3>Norris, gran pole que pone contra las cuerdas a Verstappen y Piastri; Sainz bestial con el séptimo tiempo</h3>
                         <p>

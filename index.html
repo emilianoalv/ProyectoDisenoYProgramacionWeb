@@ -9,15 +9,17 @@
     <!-- Fuente Sansation -->
     <link href="https://fonts.cdnfonts.com/css/sansation" rel="stylesheet">
 
-    <!-- CSS global y del index -->
+    <!-- CSS global, del index y de las cookies -->
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/cookies.css">
 </head>
 <body>
 
 
 <!-- NavBar-->    
-
+<!-- El navbar lo reutilizo en todas las páginas-->  
+<!-- Marco el Inicio como la página principal--> 
 <header class="navbar">
         <div class="logo">
             <img src="images/logo/Logo-F1.png" alt="LogoF1">
@@ -31,7 +33,7 @@
 
                 <!-- ACTIVIDADES CON DESPLEGABLE -->
                 <li class="dropdown">
-                    <a href="actividades.html">
+                    <a href="#" class="dropdown-toggle">
                         Actividades <span class="arrow">▾</span>
                     </a>
                     <ul class="dropdown-menu">
@@ -54,13 +56,26 @@
 
 <main>
 
-<!-- Seccion para las noticias-->
+<!-- El Main incluye diferentes mini secciones:
+ - Noticias
+ - Próximas carreras
+ - Clasificación
+ - Pilotos por escudería
+ - Equipos de la Fórmula 1
+ 
+ También incluyo el banner para las cookies solo dentro de esta página-->
+
+
+<!-- Seccion para las noticias que incluye:
+ - Noticia principal grande
+ - Noticias secundarias más pequeñas-->
 
 <section class="noticias">
     <h2>Noticias</h2>
     <div class="section-underline"></div>
     <div class="principal">
         <article>
+            <!-- Se le puede dar clic a cada noticia-->   
             <a href="noticia-escandalo-pits.html">
             <img src="images/noticias-2/Principal.jpg">
             <h3>Escándalo en los pits: la estrategia que dejó sin podio al favorito</h3>
@@ -107,7 +122,10 @@
     </div>
 </section>
 
-<!-- Sección de las próximas carreras id="proximas-carreras"-->
+<!-- Sección de las próximas carreras:
+ - Imagen, información y bandera del Gran Premio.
+ 
+ La estructura es muy similar a la que tengo en la sección de Calendario-->
 
 <section class="proximas-carreras">
     <h2>Próximas carreras</h2>
@@ -170,7 +188,7 @@
     </div>
 </section>
 
-<!-- SECCIÓN CLASIFICACIÓN -->
+<!-- SECCIÓN CLASIFICACIÓN. Muestra dos tablas para pilotos y escuderías con los primeros 5 puestos de la clasificación -->
 <section id="clasificacion" class="clasificacion">
     <h2>Clasificación</h2>
     <div class="section-underline"></div>
@@ -260,12 +278,21 @@
     </table>
 </section>
 
-<!-- SECCIÓN PILOTOS F1 -->
+<!-- SECCIÓN PILOTOS F1. Aquí muestro dos pilotos envuletos en cards.
+ Cada par de pilotos pertence a una escudería y para lograr el look
+ uso un grid interno para mostrar al piloto 1 y piloto 2 en paralelo-->
+
 <section id="pilotos" class="pilotos-f1">
     <h2>Pilotos de Fórmula 1</h2>
     <div class="section-underline"></div>
 
     <div class="pilotos-equipos">
+
+        <!-- La estructura es la siguiente: 
+            - h3 con nombre del equipo
+            - div.pilotos-grid para los 2 pilotos
+            - cada piloto tiene una imagen, un número, nombre/apellido y bandera-->
+
 
         <!-- Ferrari -->
         <article class="equipo-pilotos">
@@ -470,12 +497,15 @@
 </section>
 
 <!-- SECCIÓN EQUIPOS F1 -->
+
+<!-- Cards/tarjetas con una foto del monoplaza de los pilotos y una banda inferior de 
+ color negro con nombre y logo de la escudería -->
 <section id="equipos" class="equipos-f1">
     <h2>Equipos de Fórmula 1</h2>
     <div class="section-underline"></div>
 
     <div class="equipos-grid">
-
+        <!-- Cada article.equipo-card contiene imagen principal y un bloque inferior con texto y logo -->
         <!-- Ferrari -->
         <article class="equipo-card">
             <img src="images/equipos-index/ferrari.jpg" alt="Monoplaza Ferrari">
@@ -568,6 +598,20 @@
 
     </div>
 </section>
+
+<!-- Cookies -->
+
+<div id="cookies">
+    <div class="container">
+        <div class="subcontainer">
+            <div class = "cookies">
+                <p>Este sitio web usa cookies para asegurarnos de ofrecerte la mejor experiencia.</p>
+                <button id="cookies-btn">¡De acuerdo!</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 </main>   
 
 <!-- Footer de la página -->
@@ -587,6 +631,8 @@
     </div>
 </footer>
 
+<!--JavaScript de cookies que se encarga de controlar el botón y guardar y leer la preferencia del usuario -->
+<script src="javascript/cookies.js"></script>
 </body>
 </html>
 

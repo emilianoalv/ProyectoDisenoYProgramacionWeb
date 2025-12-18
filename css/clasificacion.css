@@ -1,21 +1,29 @@
-/* ==========================
-   SECCIÓN CLASIFICACIÓN
-===========================*/
+/* -------------------------
+   Página "Clasificación"
+------------------------- */
+
+/*Contenedor del título principal de la página de clasificación.
+Aquí solo le doy margen inferior para separar el título de las tablas.*/
 .encabezado-clasificacion {
-    /*margin-top: 40px;*/
     margin-bottom: 24px;
 }
 
+/*Le doy estilo al título de sección poniendolo con letra grande y negrita.*/
 .encabezado-clasificacion h1{
     font-size: 2.0rem;
     font-weight: 700;
 }
 
+/* Contenedores de cada bloque que incluyen clasificación de pilotos y de equipos.
+Aquí les doy margen inferior para que no se vean muy junto todo. */
 .clasificacion-pilotos,
 .clasificacion-equipos {
     margin-bottom: 48px;
 }
 
+
+/* Títulos de las tablas de "Pilotos" y "Equipos".
+Ajusto tamaño y espacio inferior. */
 .clasificacion-pilotos > h2,
 .clasificacion-equipos > h2 {
     font-size: 1.6rem;
@@ -23,20 +31,32 @@
 }
 
 
-/* ==========================
+/* -------------------------
    Tablas
-===========================*/
+------------------------- */
+
+
+/*Contenedor de las tablas con scroll horizontal para poder ver
+la información de cada piloto y escudería en los GP*/
+
+/*Esto permite que en pantallas pequeñas la tabla se desplace
+horizontalmente en lugar de romper el diseño.*/
 
 .tabla-scroll {
     width: 100%;
-    overflow-x: auto;  
-    overflow-y: hidden;
+    overflow-x: auto;  /* Permite scroll horizontal si no cabe */
+    overflow-y: hidden; /* Oculto scroll vertical que no es necesario */
 }
 
+
+/* A las tablas dentro del contenedor scroll les pongo un ancho mínimo.
+Si la pantalla es más estrecha que ese mínimo, aparece el scroll. */
 .tabla-scroll table {
     min-width: 1300px;
 }
 
+/*Estilo para ancho mínimo, bordes redondeados y sombra para que salga
+en la tarejta*/
 .tabla-clasificacion{
     min-width: 900px;
     border-collapse: collapse;
@@ -48,27 +68,41 @@
     box-shadow: 0 10px 24px rgba(0,0,0,0.12);
 }
 
+/*Esto es para la cabecera de la tabla*/
 .tabla-clasificacion thead{
     background-color: #000000;
     color: #ffffff;
 }
 
+
+/* Celdas de la tabla (tanto <th> como <td>):
+   - white-space: nowrap evita que el texto salte de línea,
+     útil para que las columnas de GPs se vean en una sola fila.
+   - padding para que el contenido tenga espacio. */
 .tabla-clasificacion th,
 .tabla-clasificacion td {
     white-space: nowrap;
     padding: 14px 18px;
 }
 
+
+/* Estilo de las celdas de la cabecera.
+Las alineo a la izquierda y las pongo en negrita. */
 .tabla-clasificacion th{
     text-align: left;
     font-weight: 700;
 }
 
+/*A partir de la tercera columna (n+3), tanto en <th> como en <td>,
+busco alinear el contenido al centro para que se vena mejor los puntos*/
 .tabla-clasificacion th:nth-child(n+3),
 .tabla-clasificacion td:nth-child(n+3) {
     text-align: center;
 }
 
+
+/*Le doy un estilo para que las filas pares aparezcan de color gris
+y las filas impares de color blanco*/
 .tabla-clasificacion tbody tr:nth-child(even) {
     background-color: #f5f5f5;
 }
@@ -77,15 +111,22 @@
     background-color: #ffffff;
 }
 
+
+/*Para seperar debajo de cada fila*/
 .tabla-clasificacion tbody tr {
     border-bottom: 1px solid #dddddd;
 }
 
 
-/* ==========================
+/* -------------------------
    Banderas
-===========================*/
+------------------------- */
 
+
+/* Estilo para las banderas en la cabecera de la tabla:
+   - Las centro dentro de la celda
+   - Las fijo a un tamaño de alto
+   - Bordes redondeados. */
 .tabla-clasificacion thead img {
     display: block;
     margin: 4px auto 0;
@@ -99,28 +140,37 @@
     display: block;
 }
 
+/* Le doy más ancho a la segunda columna con nombre de piloto y equipo
+para que el texto tenga espacio suficiente. */
 .tabla-clasificacion th:nth-child(2),
 .tabla-clasificacion td:nth-child(2){
     width: 28%
 }
 
 
-/*Responsive*/
+/* ==========================
+   Responsive
+===========================*/
 
+/* Reduzco un poco el tamaño del título principal de la sección. */
 @media (max-width: 768px){
     .encabezado-clasificacion h1{
         font-size: 1.6rem
     }
 
+    /*También reduzco el tamaño de los subtítulos de cada tabla.*/
     .clasificacion-pilotos > h2,
     .clasificacion-equipos > h2 {
         font-size: 1.3rem;
     }
 
+    /* Disminuyo el tamaño de letra de la tabla para que entre mejor
+    en pantallas pequeñas*/
     .tabla-clasificacion{
         font-size:0.9rem;
     }
 
+    /*Reduzco paddings de las celdas para que ocupen menor altura*/
     .tabla-clasificacion th,
     .tabla-clasificacion td{
         padding:10px 12px;

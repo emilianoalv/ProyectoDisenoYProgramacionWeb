@@ -30,7 +30,7 @@
 
                 <!-- ACTIVIDADES CON DESPLEGABLE -->
                 <li class="dropdown">
-                    <a href="actividades.html">
+                    <a href="#" class="dropdown-toggle">
                         Actividades <span class="arrow">▾</span>
                     </a>
                     <ul class="dropdown-menu">
@@ -63,14 +63,20 @@
                     <div class="section-underline"></div>
                 </div>
 
+                <!-- Boton del carrito que no es funcional-->
                 <button class="carrito-btn" aria-label="Ver carrito">
                     <img src="images/tienda/carrito.png" alt="Icono carrito">
-                    <!-- Puntito rojo de notificación (lo manejas por CSS) -->
+
+                    <!-- Puntito rojo de notificación lo manejo por CSS -->
                     <span class="carrito-badge"></span>
                 </button>
             </div>
 
-            <!-- GRID DE PRODUCTOS -->
+            <!-- GRID DE PRODUCTOS 
+            Cada producto está en un <article> con una imagen, nombre y 
+            precio. El layout tiene 3, 2 o 1 columna dependiendo del tamaño de
+            la pantalla-->
+
             <div class="productos-grid">
 
                 <!-- Fila 1 -->
@@ -152,11 +158,7 @@
             </div>
 
         </section>
-
-
-
 </main>       
-</body>
 
 <!-- Footer de la página -->
 
@@ -174,5 +176,5 @@
         </div>
     </div>
 </footer>
-
+</body>
 </html>

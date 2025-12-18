@@ -1,11 +1,18 @@
+/* -------------------------
+   Página "Noticia" (principal)
+------------------------- */
+
 /* ==========================
    Encabezado para noticias
 ===========================*/
+
+/*Contenedor del encabezado*/
 .encabezado-noticias {
     margin-top: 40px;
     margin-bottom: 32px;
 }
 
+/*Título principal de la sección del encabezado*/
 .encabezado-noticias h2 {
     font-size: 2.0rem;
     font-weight: 700;
@@ -14,15 +21,20 @@
 /* ==========================
    Bloque principal
 ===========================*/
+
+/*Un margen inferior para que no quede pegado con la sección de abajo */
 .bloque-principal {
     margin-bottom: 60px;
 }
 
+/*Estilo para el título del bloque principal*/
 .bloque-principal > h2 {
     font-size: 1.6rem;
     margin-bottom: 18px;
 }
 
+
+/*Layout de las noticias de la sección principal*/
 .principal-layout {
     display: grid;
     grid-template-columns: minmax(0, 1.7fr) minmax(0, 1.1fr);
@@ -35,10 +47,11 @@
     margin: 1;
 }
 
+/*Estilo de la tarjeta principal de las noticias (noticia principal)*/
 .noticia-principal{
     background-color: #ffffff;
     border-radius: 24px;
-    overflow: hidden;
+    overflow: hidden; /*Para recortar la imagen y que tenga los bordes redondos*/
     box-shadow: 0 10px 24px rgba(0,0,0,0.12);
     cursor: pointer;
     display: flex;
@@ -46,11 +59,13 @@
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+/*Estilo hover de las tarjeta de la noticia principal para que se levante  y se vea una sombra*/
 .noticia-principal:hover {
     transform: translateY(-4px);
     box-shadow: 0 16px 32px rgba(0,0,0,0.18);
 }
 
+/*Para que la tarjeta ocupe todo el ancho y se recorte manteniendo su proporción*/
 .noticia-principal img {
     width: 100%;
     display: block;
@@ -59,6 +74,7 @@
     max-height: 420px;
 }
 
+/*Titulo de la noticia principal*/
 .noticia-principal h3 {
     margin-top: 18px;
     font-size: 2.2rem;
@@ -66,10 +82,12 @@
     padding: 12px;
 }
 
+/*Para el texto de la noticia principal*/
 .noticia-principal p{
     padding: 12px;
 }
 
+/*Para que el enlace de las noticia no tenga el estilo subrayado */
 .noticia-principal a {
     color: inherit;
     text-decoration: none;
@@ -79,12 +97,14 @@
 
 /* -------- Colocar las tarjetas en bloques de 2 en 2 -------- */
 
+/*Acomodo de las tarjetas o noticias secundarias. Son 2 columnas*/
 .noticias-principales-laterales {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 18px;
 }
 
+/*Tarjeta de noticia lateral*/
 .noticia-card {
     background-color: #ffffff;
     border-radius: 24px;
@@ -96,6 +116,7 @@
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+/*Hover para las noticas secundarias*/
 .noticia-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 16px 32px rgba(0,0,0,0.18);
@@ -105,6 +126,7 @@
     margin: 0;
 }
 
+/*Para las noticias secundarias se mantiene una altura fija para que se vean uniformes*/
 .noticia-card img {
     width: 100%;
     height: 150px;
@@ -112,23 +134,26 @@
     display: block;
 }
 
+/*Título de las noticias secundarias para que sea más pequeño*/
 .noticia-card h3 {
     font-size: 1rem;
     line-height: 1.25;
     padding: 12px 14px 16px;
 }
 
-
+/* Bloque de texto principal para introducción y explicación general de cada noticias */
 .noticia-texto-principal {
     margin-top: 40px;
     max-width: 720px;
 }
 
+/*Título del texto principal*/
 .noticia-texto-principal h2 {
     font-size: 2.4rem;
     margin-bottom: 12px;
 }
 
+/*Párrafo del texto principal*/
 .noticia-texto-principal p {
     font-size: 1.1rem;
     line-height: 1.5;
@@ -140,15 +165,18 @@
    MÁS NOTICIAS
 ===========================*/
 
+/* Separación general de la sección de de Más noticias */
 .mas-noticias {
     margin-top: 72px;
     margin-bottom: 40px;
 }
 
+/*Título de la sección de más noticias*/
 .mas-noticias > h2 {
     font-size: 2.0rem;
 }
 
+/*Para el subrayado del título de esa sección*/
 .section-underline-negra {
     width: 140px;
     height: 5px;
@@ -159,13 +187,13 @@
 
 
 /*Tarjetas de noticias grandes de esta sección*/
-
 .mas-noticias-lista {
     display: flex;
     flex-direction: column;
     gap: 26px;
 }
 
+/*Para el estilo particular de las noticias de esta sección*/
 .mas-noticia-card{
     display : grid; 
     grid-template-columns: 280px minmax(0,1fr);
@@ -177,15 +205,18 @@
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+/*Estilo hover como en otras partes de la página, pero para las tarjetas de las noticias*/
 .mas-noticia-card:hover{
     transform: translateY(-4px);
     box-shadow: 0 18px 36px rgba(0,0,0,0.18);
 } 
 
+/*Contendor para imagenes*/
 .mas-noticia-imagen{
     overflow: hidden;
 }
 
+/*Para que la imagen de la tarjeta se vea grande*/
 .mas-noticia-imagen img {
     width: 100%;
     height: 100%;
@@ -193,6 +224,7 @@
     display: block;
 }
 
+/*Estilo para el contenido del texto de cada noticia*/
 .mas-noticia-contenido{
     padding: 22px 28px;
     display: flex;
@@ -201,11 +233,13 @@
     gap:10px;
 }
 
+/*Título de la tarjeta grande*/
 .mas-noticia-contenido h3 {
     font-size: 1.7rem;
     line-height: 1.25;
 }
 
+/*Para la vista previa del contenido de cada noticia*/
 .mas-noticia-contenido p {
     font-size: 1.05rem;
     color: #333333;
@@ -218,6 +252,8 @@
 ===========================*/
 
 @media (max-width: 768px) {
+    /*Layout cambia en la versión de celular para que el contenido pase a una columna, con la noticia
+    grande arriba y las demás debajo*/
     .principal-layout {
         grid-template-columns: 1fr;
     }
@@ -226,21 +262,8 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    /*Las tarjetas grandes de Más noticias pasan a 1 columna*/
     .mas-noticia-card {
         grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 600px) {
-    .noticias-principales-laterales {
-        grid-template-columns: 1fr;
-    }
-
-    .mas-noticia-contenido {
-        padding: 18px 20px;
-    }
-
-    .mas-noticia-contenido h3 {
-        font-size: 1.4rem;
     }
 }

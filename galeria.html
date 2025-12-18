@@ -1,14 +1,12 @@
-<link href="https://fonts.cdnfonts.com/css/sansation" rel="stylesheet">
-<style>
-@import url('https://fonts.cdnfonts.com/css/sansation');
-</style>                
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
+    <title>Galería</title>
+
+    <!-- Fuente general que uso en toda la página web-->
+    <link href="https://fonts.cdnfonts.com/css/sansation" rel="stylesheet">
 
     <!-- CSS global y de galería -->
     <link rel="stylesheet" href="css/global.css">
@@ -17,22 +15,22 @@
 </head>
 <body>
 
-<!-- NavBar-->    
-
+<!-- NavBar que ocupo en todo el sitio-->    
 <header class="navbar">
         <div class="logo">
+            <!-- Logo en la barra de navegación -->
             <img src="images/logo/Logo-F1.png" alt="LogoF1">
         </div>
     
-        <!-- MENÚ -->
+        <!-- Menú de navegación principal -->
         <nav class="menu">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="noticias.html">Noticias</a></li>
 
-                <!-- ACTIVIDADES CON DESPLEGABLE -->
+                <!-- Menú desplegable de actividades -->
                 <li class="dropdown">
-                    <a href="actividades.html">
+                    <a href="#" class="dropdown-toggle">
                         Actividades <span class="arrow">▾</span>
                     </a>
                     <ul class="dropdown-menu">
@@ -45,6 +43,8 @@
                 </li>
 
                 <li><a href="tienda-principal.html">Tienda</a></li>
+
+                <!-- Marco Galería como la página actual con la clase "activo" -->
                 <li><a href="galeria.html"class="activo">Galería</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
             </ul>
@@ -54,9 +54,14 @@
 </header>
 
 <main>
+
+<!-- ==========================
+        Sección Galería de GP
+    =========================== -->
+
     <section class="galeria-gp">
 
-        <!-- Cabecera -->
+        <!-- Cabecera de la sección -->
         <div class="galeria-header">
             <div class="galeria-texto">
                 <p>Galería</p>
@@ -66,9 +71,12 @@
         </div>
 
     
-    <!-- Se agregan filtros en forma de botones para poder ver la galería completa o por cada escudería de la F1 -->
+    <!-- Se agregan filtros en forma de botones para poder 
+     ver la galería completa o por cada escudería de la F1 -->
 
     <div class = "galeria-filtros">
+        <!-- Cada botón tiene un data-filter que se usa en jQuery
+        para saber qué imágenes debe mostrar. -->
         <button class="filtro-boton activo" data-filter = "all"> Todos </button>
         <button class="filtro-boton" data-filter = "alpine"> Alpine </button>
         <button class="filtro-boton" data-filter = "aston-martin"> Aston Martin </button>
@@ -81,9 +89,13 @@
         <button class="filtro-boton" data-filter="williams">Williams</button>
     </div>    
 
+    <!-- Creo un grid con todas las fotos de la galería.
+        Cada foto es un <article> con clase "galeria-item"
+        y además la clase de la escudería para poder filtrarla
+        después usando los botones. -->
         <div class="galeria-grid">
 
-            <!-- VUELTA 1 (01) -->
+            <!-- VUELTA 1 (01) para las primeras fotos -->
             <article class="galeria-item alpine">
                 <img src="images/galeria/Alpine/alpine-01.jpg" alt="Alpine 01">
             </article>
@@ -112,7 +124,12 @@
                 <img src="images/galeria/Williams/williams-01.jpg" alt="Williams 01">
             </article>
 
-            <!-- VUELTA 2 (02) -->
+            <!-- VUELTA 2 (02) para la segunda fila de fotos -->
+
+            <!-- Aquí sigo el mismo patrón hasta completar las 9 fotos por
+             cada escudería que quiero mostrar. El orden se va intercalando
+             para mostrar una foto de una escudería y luego de otra. Así 
+             consecutivamente -->
             <article class="galeria-item alpine">
                 <img src="images/galeria/Alpine/alpine-02.jpg" alt="Alpine 02">
             </article>
@@ -346,7 +363,7 @@
         </div>
 
         <!-- Función de lightbox para la galería. Ampliar imágenes -->
-
+        <!-- Aquí es donde se mostrará la imagen ampliada cuando se haga clic -->
         <div id="lightbox" class="lightbox">
             <span class = "lightbox-cerrar">&times;</span>
             <img id="lightbox-imagen" src="" alt="Imagen ampliada">
@@ -354,23 +371,31 @@
     </section>
 </main>
 
+<!-- ==========================
+     jQuery para filtros y lightbox
+========================== -->
+
 <!-- JQuery para la galería. Filtrar imagenes de la galería por escudería -->
 
+<!-- Cargo jQuery desde su CDN oficial para usarlo en los filtros y el lightbox -->
 <script src = "https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(function() {
 
-        //Filtro para ver la galería de tosas las escuderías o una por una
+        //Filtro para ver la galería de todas las escuderías o una por una
         $('.filtro-boton').on('click',function(){
             const filtro = $(this).data('filter');
 
-
+            // Quito la clase "activo" de todos los botones
             $('.filtro-boton').removeClass('activo');
+            // Le agrego el estado "activo" al botón que acabo de pulsar
             $(this).addClass('activo');
 
+            // Cuando el filtro es "all" muestro todas las imagenes
             if (filtro == 'all'){
                 $('.galeria-item').fadeIn(200);
             } else{
+                // Si no, oculto todas y solo muestro las que tienen la clase del filtro
                 $('.galeria-item').hide();
                 $('.galeria-item.' + filtro).fadeIn(200);
             }
@@ -381,8 +406,9 @@
         $('.galeria-item img').on('click',function(){
             const src = $(this).attr('src');
             const alt = $(this).attr('alt') || 'Foto de la galería';
-
+        // Cambio la imagen del lightbox por la que se ha pulsado
             $('#lightbox-imagen').attr('src', src).attr('alt',alt);
+        // Muestro el lightbox como un contenedor flex centrado para que la imagen salga con todo detalle 
             $('#lightbox').css('display','flex');
         });
 

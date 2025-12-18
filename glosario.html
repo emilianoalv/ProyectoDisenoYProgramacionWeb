@@ -16,7 +16,7 @@
 
 
 <!-- NavBar-->    
-
+<!-- Marco el glosario como la página activa-->    
 <header class="navbar">
         <div class="logo">
             <img src="images/logo/Logo-F1.png" alt="LogoF1">
@@ -30,7 +30,7 @@
 
                 <!-- ACTIVIDADES CON DESPLEGABLE -->
                 <li class="dropdown">
-                    <a href="actividades.html">
+                    <a href="#" class="dropdown-toggle">
                         Actividades <span class="arrow">▾</span>
                     </a>
                     <ul class="dropdown-menu">
@@ -51,12 +51,24 @@
     </div>
 </header>
 
+
+<!-- Sección del glosario -->
+    <!-- Los términos de la sección en forma de entries y cada término inlcuye 
+     la definición, un dato relevnte y una imagen -->
+
 <main class = "glosario">
     <!-- Titulo-->
      <section class="glosario-header">
         <h1> Glosario Fórmula 1</h1>
+        <!-- Subrayado para mantener el estilo del resto del sitio -->
         <span class="glosario-underline"></span>
      </section>
+
+
+    <!-- La estructura es la siguiente:
+     article.glosario-item:
+     - Número a la izquierda del término
+     - Contenido que incluye título, parrafos, un dato relevante y una imagen-->
 
      <section class="glosario-lista">
         <!-- 01 Alerón delantero-->
@@ -296,6 +308,8 @@
 
 </main>
 
+
+<!-- Footer -->
 <footer class = "site-footer">
     <div class = "footer-inner">
         <div class="footer-left">

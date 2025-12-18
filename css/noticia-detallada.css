@@ -1,9 +1,15 @@
+/* -------------------------
+   Página "Noticia" (a detalle)
+------------------------- */
+/*Limito el ancho y lo centro para que se lea mejor.*/
 .noticia-detallada{
     max-width: 980px;
     margin:48px auto;
     padding:0 20px;
 }
 
+/*Aquí uso la función de clamp para que se adapte 
+a la pantalla sin romper nada*/
 .noticia-header h1{
     margin:0;
     font-size: clamp(1.7rem, 2.8vw, 2.4rem);
@@ -12,6 +18,8 @@
     letter-spacing: 0.2px;
 }
 
+/*Subtitulo con resumen corto de la noticia. Aquí le
+limito el ancho para que no se haga muy largo*/
 .noticia-subtitulo{
   margin: 0;
   font-size: 1.05rem;
@@ -20,10 +28,13 @@
   max-width: 80ch;
 }
 
+/*Imagen de la noticia*/
 .noticia-imagen{
   margin: 22px 0 8px;
 }
 
+/*La imagen se hace responsive con efecto de sombra
+y bordes*/
 .noticia-imagen img{
   width: 100%;
   height: auto;
@@ -34,6 +45,7 @@
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.10);
 }
 
+/*Estilo del cuerpo de la noticia*/
 .noticia-cuerpo{
   margin-top: 18px;
   font-size: 1.05rem;
@@ -46,6 +58,8 @@
   max-width: 88ch;
 }
 
+/*p+p lo usé para la separación ente parrafos, cuando
+hay uno detrás de otro*/
 .noticia-cuerpo p + p{
   margin-top: 14px;
 }
@@ -54,20 +68,23 @@
    Responsive
 ===========================*/
 
+/*Reduzco márgenes para no que no se vea tan vacío*/
 @media (max-width: 768px){
-  .noticia-detalle{
+  .noticia-detallada{
     margin: 28px auto;
   }
 
-  .noticia-articulo{
+  .noticia-header{
     padding: 22px 18px;
     border-radius: 18px;
   }
 
+  /*Bajo un poco el subtítulo para el celular*/
   .noticia-subtitulo{
     font-size: 1rem;
   }
 
+  /*Compacto más la imagen en el teléfono*/
   .noticia-imagen img{
     border-radius: 14px;
     max-height: 360px;

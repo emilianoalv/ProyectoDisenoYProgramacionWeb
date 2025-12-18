@@ -1,11 +1,21 @@
-/* Bloque galería */
+/* -------------------------
+   Página "Galería"
+------------------------- */
+
+/* Contenedor principal de la galería.
+Limito el ancho y lo centro dentro de la página. */
 
 .galeria-gp {
     width: min(1200px, 100% - 3rem);
-    /*margin: 5rem auto 6rem;*/
 }
 
-/* Cabecera */
+
+/* -------------------------
+   Cabecera con título y sub-texto
+------------------------- */
+
+/* Cabecera de la sección. Aquí coloco el título y el sub-texto
+   en un mismo bloque usando flexbox. */
 
 .galeria-header {
     display: flex;
@@ -15,11 +25,13 @@
     margin-bottom: 2.5rem;
 }
 
+/* Párrafo encima del título de "Mejores fotos de la temporada" */
 .galeria-texto p {
     font-size: 1.1rem;
     margin-bottom: 0.25rem;
 }
 
+/* Estilo para el título principal de la galería */
 .galeria-texto h2 {
     font-size: 2rem;
     font-weight: 700;
@@ -36,24 +48,28 @@
     margin-top: 0.6rem;
 }
 
-/* Grid de imágenes */
+/* -------------------------
+   Grid de imágenes
+------------------------- */
 
+/*Aquí coloco un grid para poner las fotos de la galería.
+Para PC uso 3 columnas*/ 
 .galeria-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
 }
-
+/*Cada elemento de la galería es un "article" con esta clase.
+Uso aspect-ratio para mantener la proporción de la tarjeta donde
+esta la imagen.*/
 .galeria-item {
     position: relative;
     aspect-ratio: 4 / 3;
 }
 
-.galeria-item--wide {
-    grid-column: span 2;
-    aspect-ratio: 8 / 3;
-}
 
+/*Esto me sirve para que las imagenes de cada tarjeta ocupen todo el espacio
+disponible y que se recorten sin deformarse*/
 .galeria-item img {
     width: 100%;
     height: 100%;
@@ -64,12 +80,20 @@
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+
+/* Se hace el efecto al pasar el cursor por encima. Se levanta un poco la imagen
+y aumenta la sombra. */
 .galeria-item img:hover {
     transform: translateY(-3px);
     box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
 }
 
-/* Para darle estilo a los botones */
+
+/* -------------------------
+   Filtros (botones por escudería)
+------------------------- */
+
+/* Contenedores para los botones de filtro de las escuderías */
 
 .galeria-filtros{
     display: flex;
@@ -79,6 +103,7 @@
     margin: 3px 0 40px;
 }
 
+/* Estilo base de cada botón de filtro */
 .filtro-boton {
     font-family: 'Sansation', sans-serif;
     text-transform: uppercase;
@@ -94,11 +119,14 @@
     font-weight: 500;
 }
 
+/* Para hacer efecto al pasar el ratón por encima del botón */
 .filtro-boton:hover {
     transform: translateY(-1px);
     background-color: #111827;
     color: #ffffff;
 }
+
+/* Cambio el color del botón cuando está seleccionado */
 
 .filtro-boton.activo {
     background-color: #e11d48;
@@ -107,7 +135,14 @@
 }
 
 
-/* Para lightbox. Imagen ampliada */
+/* -------------------------
+   Lightbox (imagen ampliada)
+------------------------- */
+
+/*Esto es para el contenedor del lightbox. Hace que la imagen
+se haga más grande y oscure un poco el fondo.
+
+Esto se activa gracias al JQuery dentro del HTML*/
 
 .lightbox {
     position: fixed;
@@ -119,6 +154,7 @@
     z-index: 999;
 }
 
+/* Imagen ampliada dentro del lightbox */
 .lightbox img{
     max-width: 90%;
     max-height: 90%;
@@ -126,6 +162,7 @@
     box-shadow: 0 15px 30px rgba(0,0,0,0.6);
 }
 
+/*Para cerrar el lightbox*/
 .lightbox-cerrar {
     position: absolute;
     top: 20px;
@@ -136,15 +173,20 @@
 }
 
 
-/* Versión móvil */
+/* ==========================
+   Responsive
+===========================*/
 
 @media (max-width: 768px) {
+    /* Hago que la galería ocupe todo el ancho y
+    añado padding lateral para que no pegue en los bordes. */
     .galeria-gp {
         width: 100%;
         margin: 4rem auto 5rem;
         padding: 0 1.25rem;
     }
 
+    /*Para el celular se apila en estilo de columna*/
     .galeria-header {
         flex-direction: column;
         align-items: flex-start;
@@ -154,13 +196,9 @@
         font-size: 2.2rem;
     }
 
+    /* Paso el grid de 3 columnas a 1 sola columna. */
     .galeria-grid {
         grid-template-columns: 1fr;
     }
 
-    .galeria-item,
-    .galeria-item--wide {
-        grid-column: auto;
-        aspect-ratio: 4 / 3;
-    }
 }

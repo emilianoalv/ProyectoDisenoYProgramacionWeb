@@ -5,36 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAST - Clasificación F1</title>
 
-    <!-- Fuente general -->
+    <!-- Fuente general que uso en toda la página web-->
     <link href="https://fonts.cdnfonts.com/css/sansation" rel="stylesheet">
 
-    <!-- CSS global y de clasificación -->
+    <!-- CSS global para toda la página y el específico de clasificación -->
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/clasificacion.css">
 
 </head>
 <body>
 
-    <!-- NavBar-->    
+    <!-- NavBar que ocupo en todo el sitio-->    
 
 <header class="navbar">
         <div class="logo">
+            <!-- Logo de la página web -->
             <img src="images/logo/Logo-F1.png" alt="LogoF1">
         </div>
     
-        <!-- MENÚ -->
+        <!-- Menú de navegación principal -->
         <nav class="menu">
             <ul>
+                <!-- Enlaces para las diferentes secciones de la página -->
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="noticias.html">Noticias</a></li>
 
-                <!-- ACTIVIDADES CON DESPLEGABLE -->
+                <!-- Menú desplegable para la sección de Actividades -->
                 <li class="dropdown">
-                    <a href="actividades.html">
+                    <a href="#" class="dropdown-toggle">
                         Actividades <span class="arrow">▾</span>
                     </a>
                     <ul class="dropdown-menu">
                         
+                        <!-- Marco la página actual con la clase "activo" -->
                         <li><a href="clasificacion.html"class="activo">Clasificación</a></li>
                         <li><a href="calendario-gp.html">Calendario grandes premios</a></li>
                         <li><a href="pilotos-buscador.html">Pilotos</a></li>
@@ -56,21 +59,32 @@
     <!-- TÍTULO PRINCIPAL -->
     <section class="encabezado-clasificacion">
         <h1>Clasificación</h1>
+
+        <!-- Para el subrayado rojo reutilizado de global.css -->
         <div class="section-underline"></div>
     </section>
 
         <!-- TABLA PILOTOS -->
 <section class="clasificacion-pilotos">
+    <!-- Título del bloque de pilotos -->
     <h2>Pilotos</h2>
 
+    <!-- Contenedor con scroll horizontal para que la tabla
+    pueda desplazarse en los diferentes dispositivos si no cabe completa. 
+    Aquí se ve la información de los puntos de cada GP para pilotos y escuderías-->
     <div class="tabla-scroll">
+
+        <!-- Tabla principal de pilotos. Se conecta con .tabla-clasificacion en el CSS -->
         <table class="tabla-clasificacion tabla-pilotos">
             <thead>
                 <tr>
+                    <!-- Columnas fijas para posición, nombre y puntos totales -->
                     <th>Pos</th>
                     <th>Nombre</th>
                     <th>Puntos</th>
                     <th>
+                        <!-- Aquí hice una columna por cada Gran Premio y enseño tanto
+                         el acrónimo del GP y una bandera del país donde se compitió -->
                         AU<br>
                         <img src="images/banderas/AU.jpg" alt="Australia">
                     </th>
@@ -152,12 +166,17 @@
                     </th>
                 </tr>
             </thead>
+
+            <!-- Cuerpo de la tabla:
+                 Cada fila es un piloto, y cada celda con números es la cantidad
+                 de puntos que consiguió en ese Gran Premio. La suma de 
+                 esos valores se refleja en la columna "Puntos". -->
+
             <tbody>
                 <tr>
                     <td>1</td>
                     <td class="piloto">
                         <span>Max Verstappen</span>
-                       
                     </td>
                     <td>336</td>
                     <td>26</td>
@@ -181,12 +200,13 @@
                     <td>0</td>
                     <td>0</td>
                 </tr>
-
+                    <!-- Aquí sigo el mismo patrón de antes para colocar
+                     posición, nombre del piloto, puntos totales,
+                     y después puntos totales por cada GP. -->
                 <tr>
                     <td>2</td>
                     <td class="piloto">
-                        <span>Lando Norris</span>
-                        
+                        <span>Lando Norris</span> 
                     </td>
                     <td>314</td>
                     <td>33</td>
@@ -757,14 +777,17 @@
 </section>
 
 
-        <!-- TABLA EQUIPOS -->
-        <section class="clasificacion-equipos">
-    <h2>Equipos</h2>
-
-    <div class="tabla-scroll">
-        <table class="tabla-clasificacion tabla-equipos">
-            <thead>
-                <tr>
+    <!-- TABLA EQUIPOS -->
+    <section class="clasificacion-equipos">
+        <!-- Título del bloque de equipos -->
+        <h2>Equipos</h2>
+        <!-- Igual que en pilotos, uso el contenedor con scroll horizontal -->
+        <div class="tabla-scroll">
+            <!-- Tabla de equipos. Comparte la clase .tabla-clasificacion para reutilizar estilos. -->
+            <table class="tabla-clasificacion tabla-equipos">
+                <thead>
+                    <tr>
+                         <!-- Mismas columnas que en la tabla anterior. -->
                     <th>Pos</th>
                     <th>Equipo</th>
                     <th>Puntos</th>
@@ -850,6 +873,9 @@
                     </th>
                 </tr>
             </thead>
+            <!-- Cuerpo de la tabla de equipos donde cada fila representa 
+            a una escudería con sus puntos totales y la suma de puntos por carrera. -->
+
             <tbody>
                 <tr>
                     <td>1</td>
@@ -1146,7 +1172,7 @@
 </section>
 </main>
 
-<!-- Footer de la página -->
+<!-- Footer de la página que uso siempre -->
 
 <footer class = "site-footer">
     <div class = "footer-inner">

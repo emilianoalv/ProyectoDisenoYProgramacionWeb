@@ -1,16 +1,23 @@
+/* -------------------------
+   Página "Piltos"
+------------------------- */
+/*Estilo con ancho máximo y centrado con márgenes arriba y abajo*/
 .buscador-pilotos {
     width: min(1200px, 100% - 3rem);
     margin: 4rem auto 5rem;
 }
 
+/*Encabeza para que se alinee a la izquierda*/
 .buscador-pilotos-encabezado {
     text-align: left;
 }
 
+/*Estilo para el título de la sección*/
 .buscador-pilotos-encabezado h2 {
     font-size: 2.4rem;
 }
 
+/*Para la descripción que sale debajo del título*/
 .buscador-pilotos-texto {
     margin-top: 0.8rem;
     font-size: 1rem;
@@ -19,16 +26,19 @@
 
 /* Barra de busqueda */
 
+/*Contenedor en fila con separación entre elementos*/
 .buscador-pilotos-barra {
     margin: 2rem 0 1rem;
     display: flex;
     gap: 0.75rem;
-    max-width: 600px;
+    max-width: 600px; /*Para que no se vea muy grande en pantallas grandes*/
 }
 
+/* Estilos del input */
+/* Aplico el mismo estilo al input del buscador genérico también */
 .buscador-pilotos-barra input,
 .buscador input {             
-    flex: 1;
+    flex: 1; /*para que el input ocupe casi todo el espacio*/
     padding: 0.6rem 0.9rem;
     border-radius: 999px;
     border: 1px solid #ccc;
@@ -36,6 +46,8 @@
     font-size: 0.95rem;
 }
 
+/*Estilos del botón*/
+/*Aplico el mismo estilo al botón del buscador genérico también*/
 .buscador-pilotos-barra button,
 .buscador button {
     padding: 0.6rem 1.8rem;
@@ -48,6 +60,7 @@
     font-size: 0.95rem;
 }
 
+/*Efecto hover para el botón*/
 .buscador-pilotos-barra button:hover,
 .buscador button:hover {
     background: #d90000;
@@ -55,6 +68,7 @@
 }
 
 /* Estado */
+/*Texto para mostrar "cargando", "sin resultados", etc.*/
 
 #estado {
     text-align: left;
@@ -64,7 +78,7 @@
 }
 
 /* Resultados */
-
+/*El acomodo es responsive dependiendo del espacio*/
 #resultados {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -72,7 +86,7 @@
 }
 
 /* Tarjetas para los pilotos */
-
+/*Tarjetas con color blanco, borde, sombra y padding*/
 .piloto {
     background: #ffffff;
     border-radius: 22px;
@@ -83,23 +97,27 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
+/*Nombre del piloto*/
 .piloto h3 {
     margin: 0 0 0.4rem 0;
     font-size: 1.1rem;
 }
 
+/*Número del piloto*/
 .piloto .numero {
     font-weight: 700;
     margin-right: 6px;
     font-size: 1rem;
 }
 
+/*Nombre del equipo*/
 .piloto .equipo {
     font-weight: 600;
     color: #444;
     margin: 0.1rem 0;
 }
 
+/*Para la información extra de cada piloto*/
 .piloto .extra {
     font-size: 0.85rem;
     color: #666;
@@ -111,6 +129,8 @@
    Responsive
 ===========================*/
 
+
+/*Para el teléfono uso todo el ancho y pongo más padding lateral*/
 @media (max-width: 768px){
     .buscador-pilotos{
         width: 100%;
@@ -118,16 +138,19 @@
         padding: 0 1.25rem;
     }
 
+    /*Cambio el tamaño del título para que se vea más pequeño*/
     .buscador-pilotos-encabezado h2{
         font-size:2rem;
     }
 
+    /*Para centrar texto y compactarlo más*/
     .buscador-pilotos-texto{
         font-size: 0.95rem;
         max-width: 28rem;
         margin:0.8rem auto 0;
     }
 
+    /*Ajusto la separación entre tarjetas para que quepan mejor*/
     #resultados {
         gap: 1.1rem;
     }

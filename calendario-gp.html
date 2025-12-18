@@ -15,8 +15,11 @@
 <body>
     
     
+    <!-- La NavBar se mantiene igual en todo el sitio para que al navegar sea consistente. 
+     Esto incluye el menú dropdown en la sección de Actividades -->
 <header class="navbar">
         <div class="logo">
+            <!-- Alt para accesibilidad -->
             <img src="images/logo/Logo-F1.png" alt="LogoF1">
         </div>
     
@@ -28,7 +31,7 @@
 
                 <!-- ACTIVIDADES CON DESPLEGABLE -->
                 <li class="dropdown">
-                    <a href="actividades.html">
+                    <a href="#" class="dropdown-toggle">
                         Actividades <span class="arrow">▾</span>
                     </a>
                     <ul class="dropdown-menu">
@@ -51,12 +54,21 @@
 
 <main>
     <!-- Sección de los grandes premios -->
+    <!-- Uso <section> y <article> para mantener una buena estructura:
+         - section para el bloque temático
+         - article para cada GP como tarjeta independiente -->
 
 <section id="grandes-premios" class="grandes-premios">
     <h2>Próximas carreras</h2>
     <div class="section-underline"></div>
 
+    <!-- Acomodo de las tarjetas de los grandes premios -->
     <div class="carreras-grid">
+
+    <!-- Cada gran premio es como si fuera una tarjeta (article) y cada contiene:
+                    - Imagen del circuito
+                     - Contenedor con nombre del GP, circuito y fecha
+                     - Bandera del país -->
 
         <!-- GP Australia-->
         <article class="carrera">
@@ -322,6 +334,8 @@
     </div>
 </section>
 </main>
+
+
 <!-- Footer de la página -->
 
 <footer class = "site-footer">

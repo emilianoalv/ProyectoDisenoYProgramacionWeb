@@ -1,0 +1,85 @@
+/* -------------------------
+   Página "Cookies"
+------------------------- */
+
+/* Banner fijo abajo, siempre por encima */
+#cookies{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  color: #fff;
+  background-color: rgba(0,0,0,0.75);
+
+  /* Z-index alto para que nada lo tape */
+  z-index: 99999; 
+
+  /* Un poco de padding vertical para que no se vea aplastado */
+  padding: 12px 0;
+
+  display: none; /*Para que no salga siempre el mensaje */
+
+}
+
+/* Encapsular los contenedores para no afectar todo el sitio */
+#cookies .container{
+  width: min(1600px, 100%);
+  margin: 0 auto;
+
+  /* Separación lateral para que no pegue a la orilla */
+  padding: 0 16px;
+}
+
+#cookies .subcontainer{
+/* Mantengo el contenido un poco más centrado */
+  width: 85%;
+  margin: 0 auto;
+}
+
+/* Texto a la izquierda y botón a la derecha */
+#cookies .cookies{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+
+  /* Si no cabe en pantallas chicas, que se acomode hacia abajo */
+  flex-wrap: wrap;
+}
+
+#cookies .cookies p{
+  margin: 0;
+  /* Para que el texto ocupe el espacio disponible */
+  flex: 1;          
+  min-width: 240px;   
+}
+
+/* Botón para aceptar */
+#cookies-btn{
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+
+  border: 2px solid white;
+  background-color: black;
+  color: white;
+
+  /* Para que el texto del botón no se rompa en dos líneas */
+  white-space: nowrap; 
+}
+
+/* En pantallas menores a 1600px, uso el ancho completo */
+@media(max-width:768px){
+    #cookies .container{
+        width: 100%;
+    }
+}   
+
+@media(max-width:1024px){
+    .cookies{
+        width: 10px 0;
+    }
+}   
